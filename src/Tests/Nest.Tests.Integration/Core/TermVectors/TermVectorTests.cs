@@ -33,23 +33,6 @@ namespace Nest.Tests.Integration.Core.TermVectors
 			AssertContentsVectors(result);
 		}
 
-		[Test]
-		[SkipVersion("0 - 1.4.9", "Per field analyzers added in ES 1.5")]
-		public void TermVectorDocumentWithPerFieldAnalyzers()
-		{
-			var document = NestTestData.Data.FirstOrDefault(d => d.Id == 1);
-			var result = Client.TermVector<ElasticsearchProject>(s => s
-				.Document(document)
-				.Fields(ep => ep.Content)
-				.PerFieldAnalyzer(pfa => pfa
-					.Add(p => p.Name, "keyword")
-					.Add(p => p.Country, "simple")
-				)
-			);
-
-			AssertContentsVectors(result);
-		}
-
 		private static void AssertContentsVectors(ITermVectorResponse result)
 		{
 			result.IsValid.Should().BeTrue();
@@ -117,7 +100,7 @@ namespace Nest.Tests.Integration.Core.TermVectors
 		{
 			var result = Client.TermVector<ElasticsearchProject>(s => s
 				.Id("1")
-				.Fields("blahblah"));
+				.Fields(ep => ep.Name));
 
 			result.IsValid.Should().BeTrue();
 			result.TermVectors.Count().ShouldBeEquivalentTo(0);

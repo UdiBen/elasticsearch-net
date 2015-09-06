@@ -11,7 +11,6 @@ namespace Nest
 	public interface IGeoShapeQuery : IFieldNameQuery
 	{
 		PropertyPathMarker Field { get; set; }
-
 	}
 
 	[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
@@ -19,9 +18,6 @@ namespace Nest
 	{
 		[JsonProperty("shape")]
 		ICircleGeoShape Shape { get; set; }
-
-		[JsonProperty(PropertyName = "boost")]
-		double? Boost { get; set; }
 	}
 
 	public class GeoShapeCircleQuery : PlainQuery, IGeoShapeCircleQuery
@@ -46,8 +42,6 @@ namespace Nest
 
 		public PropertyPathMarker Field { get; set; }
 
-		public double? Boost { get; set; } 
-
 		public ICircleGeoShape Shape { get; set; }
 	}
 
@@ -70,13 +64,10 @@ namespace Nest
 
 		string IQuery.Name { get; set; }
 
-		double? IGeoShapeCircleQuery.Boost { get; set; }
-
 		void IFieldNameQuery.SetFieldName(string fieldName)
 		{
 			((IGeoShapeQuery)this).Field = fieldName;
 		}
-
 		PropertyPathMarker IFieldNameQuery.GetFieldName()
 		{
 			return ((IGeoShapeQuery)this).Field;
@@ -115,12 +106,5 @@ namespace Nest
 			Self.Shape.Radius = radius;
 			return this;
 		}
-
-		public GeoShapeCircleQueryDescriptor<T> Boost(double boost)
-		{
-			Self.Boost = boost;
-			return this;
-		}
-
 	}
 }

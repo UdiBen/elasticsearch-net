@@ -1368,8 +1368,7 @@ namespace Elasticsearch.Net.Serialization
 						else
 						{
 							obj = ConstructorCache[type]();
-							var cache = SetCache[type];
-							foreach (KeyValuePair<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>> setter in cache)
+							foreach (KeyValuePair<string, KeyValuePair<Type, ReflectionUtils.SetDelegate>> setter in SetCache[type])
 							{
 								object jsonValue;
 								if (jsonObject.TryGetValue(setter.Key, out jsonValue))

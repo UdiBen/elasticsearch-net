@@ -15,25 +15,22 @@ namespace Nest
 		string PinLocation { get; set; }
 		IEnumerable<string> Points { get; set; }
 		GeoUnit? GeoUnit { get; set; }
-		GeoDistance? DistanceType { get; set; }
 	}
 
 	public class GeoDistanceSort : SortBase, IGeoDistanceSort
 	{
-		internal static List<string> Params = new List<string> { "missing", "mode", "order", "unit", "distance_type" };
+		internal static List<string> Params = new List<string> { "missing", "mode", "order", "unit" };
 
 		internal static int MissingIndex = 0;
 		internal static int ModeIndex = 1;
 		internal static int OrderIndex = 2;
 		internal static int UnitIndex = 3;
-		internal static int DistanceTypeIndex = 4;
 
 		public PropertyPathMarker Field { get; set; }
 		public string PinLocation { get; set; }
 		public IEnumerable<string> Points { get; set; }
 		public GeoUnit? GeoUnit { get; set; }
-		public GeoDistance? DistanceType { get; set; }
-
+		
 		object ICustomJson.GetCustomJson()
 		{
 			var sort = this.Points.HasAny() ? (object)this.Points : this.PinLocation;
@@ -43,8 +40,7 @@ namespace Nest
 				{ Params[MissingIndex], this.Missing },
 				{ Params[ModeIndex], this.Mode},
 				{ Params[OrderIndex], this.Order },
-				{ Params[UnitIndex], this.GeoUnit },
-				{ Params[DistanceTypeIndex], this.DistanceType }
+				{ Params[UnitIndex], this.GeoUnit }
 			};
 		}
 	}
@@ -59,9 +55,7 @@ namespace Nest
 		IEnumerable<string> IGeoDistanceSort.Points { get; set; }
 
 		GeoUnit? IGeoDistanceSort.GeoUnit { get; set; }
-
-		GeoDistance? IGeoDistanceSort.DistanceType { get; set; }
-
+	
 		public SortGeoDistanceDescriptor<T> PinTo(string geoLocationHash)
 		{
 			geoLocationHash.ThrowIfNullOrEmpty("geoLocationHash");
@@ -96,13 +90,6 @@ namespace Nest
 		{
 			unit.ThrowIfNull("unit");
 			Self.GeoUnit = unit;
-			return this;
-		}
-
-		public SortGeoDistanceDescriptor<T> DistanceType(GeoDistance distanceType)
-		{
-			distanceType.ThrowIfNull("distanceType");
-			Self.DistanceType = distanceType;
 			return this;
 		}
 
@@ -142,8 +129,7 @@ namespace Nest
 				{ GeoDistanceSort.Params[GeoDistanceSort.MissingIndex], Self.Missing },
 				{ GeoDistanceSort.Params[GeoDistanceSort.ModeIndex], Self.Mode},
 				{ GeoDistanceSort.Params[GeoDistanceSort.OrderIndex], Self.Order },
-				{ GeoDistanceSort.Params[GeoDistanceSort.UnitIndex], Self.GeoUnit },
-				{ GeoDistanceSort.Params[GeoDistanceSort.DistanceTypeIndex], Self.DistanceType }
+				{ GeoDistanceSort.Params[GeoDistanceSort.UnitIndex], Self.GeoUnit }
 			};
 		}
 	}

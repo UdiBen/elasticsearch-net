@@ -29,13 +29,9 @@ namespace Nest
 			{
 				var propertyName = childProperty.Name;
 				var typeProperty = ((JObject)childProperty.Value).Property("type");
-				if (typeProperty != null)
-					typeProperty.Remove();
+				typeProperty.Remove();
 
-				var typePropertyValue = (typeProperty != null)
-					? typeProperty.Value.ToString()
-					: "custom";
-
+				var typePropertyValue = typeProperty.Value.ToString();
 				Language language;
 				if (Enum.TryParse(typePropertyValue, true, out language))
 				{

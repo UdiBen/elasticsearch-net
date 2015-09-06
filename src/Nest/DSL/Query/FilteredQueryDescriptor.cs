@@ -17,9 +17,6 @@ namespace Nest
 		[JsonProperty(PropertyName = "filter")]
 		[JsonConverter(typeof(CompositeJsonConverter<ReadAsTypeConverter<FilterContainer>, CustomJsonConverter>))]
 		IFilterContainer Filter { get; set; }
-
-		[JsonProperty(PropertyName = "boost")]
-		double? Boost { get; set; }
 	}
 
 	public class FilteredQuery : PlainQuery, IFilteredQuery
@@ -33,7 +30,6 @@ namespace Nest
 		bool IQuery.IsConditionless { get {return false;}}
 		public IQueryContainer Query { get; set; }
 		public IFilterContainer Filter { get; set; }
-		public double? Boost { get; set; }
 	}
 
 	public class FilteredQueryDescriptor<T> : IFilteredQuery where T : class
@@ -43,8 +39,6 @@ namespace Nest
 		IQueryContainer IFilteredQuery.Query { get; set; }
 
 		IFilterContainer IFilteredQuery.Filter { get; set; }
-
-		double? IFilteredQuery.Boost { get; set; }
 
 		string IQuery.Name { get; set; }
 
@@ -67,13 +61,6 @@ namespace Nest
 			Self.Name = name;
 			return this;
 		}
-
-		public FilteredQueryDescriptor<T> Boost(double boost)
-		{
-			Self.Boost = boost;
-			return this;
-		}
-
 		public FilteredQueryDescriptor<T> Query(Func<QueryDescriptor<T>, QueryContainer> querySelector)
 		{
 			querySelector.ThrowIfNull("querySelector");

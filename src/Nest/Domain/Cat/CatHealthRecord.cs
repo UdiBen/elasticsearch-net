@@ -37,8 +37,5 @@ namespace Nest
 
 		[JsonProperty("unassign")]
 		public string Unassigned { get; set; }
-
-		[JsonProperty("pending_tasks")]
-		public string PendingTasks { get; set; }
 	}
 }

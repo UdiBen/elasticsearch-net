@@ -60,10 +60,7 @@ namespace Elasticsearch.Net.Connection.RequestHandlers
 			if (ss != null) return (string.Join("\n", ss) + "\n").Utf8Bytes();
 
 			var so = data as IEnumerable<object>;
-			var indent = this._settings.UsesPrettyRequests
-				? SerializationFormatting.Indented
-				: SerializationFormatting.None;
-			if (so == null) return this._serializer.Serialize(data, indent);
+			if (so == null) return this._serializer.Serialize(data);
 			var joined = string.Join("\n", so
 				.Select(soo => this._serializer.Serialize(soo, SerializationFormatting.None).Utf8String())) + "\n";
 			return joined.Utf8Bytes();
@@ -141,10 +138,7 @@ namespace Elasticsearch.Net.Connection.RequestHandlers
 
 			//When we are not using pooling we forcefully rethrow the exception
 			if (!requestState.UsingPooling && innerException != null && maxRetries == 0)
-			{
-				innerException.RethrowKeepingStackTrace();
-				return;
-			}
+				throw innerException;
 		
 			var exceptionMessage = tookToLong 
 				? CreateTookTooLongExceptionMessage(requestState, innerException) 

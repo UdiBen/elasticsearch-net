@@ -93,7 +93,7 @@ namespace Nest.Resolvers.Converters.Filters
 						
 						var gt = jv.Value["gt"];
 						if (gt != null)
-							filter.GreaterThan = ToString(gt);
+							filter.GreaterThanOrEqualTo = ToString(gt);
 
 						var lte = jv.Value["lte"];
 						if (lte != null)
@@ -101,7 +101,7 @@ namespace Nest.Resolvers.Converters.Filters
 							
 						var lt = jv.Value["lt"];
 						if (lt != null)
-							filter.LowerThan = ToString(lt);
+							filter.LowerThanOrEqualTo = ToString(lt);
 						
 						break;
 				}

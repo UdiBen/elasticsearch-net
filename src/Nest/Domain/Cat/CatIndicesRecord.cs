@@ -28,11 +28,5 @@ namespace Nest
 
 		[JsonProperty("store.size")]
 		public string StoreSize { get; set; }
-
-		[JsonProperty("status")]
-		public string Status { get; set; }
-
-		[JsonProperty("tm")]
-		public string TotalMemory { get; set; }
 	}
 }

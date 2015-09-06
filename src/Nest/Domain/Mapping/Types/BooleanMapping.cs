@@ -32,8 +32,5 @@ namespace Nest
 
 		[JsonProperty("copy_to")]
 		public IEnumerable<PropertyPathMarker> CopyTo { get; set; }
-
-		[JsonProperty("doc_values")]
-		public bool? DocValues { get; set; }
 	}
 }

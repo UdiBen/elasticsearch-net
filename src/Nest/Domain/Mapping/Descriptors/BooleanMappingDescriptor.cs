@@ -84,11 +84,5 @@ namespace Nest
 			}
 			return this;
 		}
-
-		public BooleanMappingDescriptor<T> DocValues(bool docValues = true)
-		{
-			this._Mapping.DocValues = docValues;
-			return this;
-		}
 	}
 }

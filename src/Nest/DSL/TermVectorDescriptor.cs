@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Elasticsearch.Net;
 using Newtonsoft.Json;
-using System.Linq.Expressions;
 
 namespace Nest
 {
@@ -14,9 +13,6 @@ namespace Nest
 		/// </summary>
 		[JsonProperty("doc")]
 		object Document { get; set; }
-
-		[JsonProperty("per_field_analyzer")]
-		IDictionary<PropertyPathMarker, string> PerFieldAnalyzer { get; set; }
 	}
 
 	public interface ITermvectorRequest<T> : ITermvectorRequest where T : class { }
@@ -39,16 +35,12 @@ namespace Nest
 		}
 
 		public object Document { get; set; }
-
-		public IDictionary<PropertyPathMarker, string> PerFieldAnalyzer { get; set; }
 	}
 
 	public partial class TermvectorRequest<T> : DocumentOptionalPathBase<TermvectorRequestParameters, T>, ITermvectorRequest<T>
 		where T : class
 	{
 		object ITermvectorRequest.Document { get; set; }
-
-		IDictionary<PropertyPathMarker, string> ITermvectorRequest.PerFieldAnalyzer { get; set; }
 
 		public TermvectorRequest(string id) : base(id) { }
 
@@ -66,30 +58,14 @@ namespace Nest
 		, ITermvectorRequest
 		where T : class
 	{
-		private ITermvectorRequest Self { get { return this; } }
-		
 		object ITermvectorRequest.Document { get; set; }
-
-		IDictionary<PropertyPathMarker, string> ITermvectorRequest.PerFieldAnalyzer { get; set; }
 
 		public TermvectorDescriptor<T> Document<TDocument>(TDocument document) where TDocument : class
 		{
-			Self.Document = document;	
-			return this;
-		}
-		public TermvectorDescriptor<T> PerFieldAnalyzer(Func<FluentDictionary<Expression<Func<T, object>>, string>, FluentDictionary<Expression<Func<T, object>>, string>> analyzerSelector)
-		{
-			var d = new FluentDictionary<Expression<Func<T, object>>, string>();
-			analyzerSelector(d);
-			Self.PerFieldAnalyzer = d.ToDictionary(x => PropertyPathMarker.Create(x.Key), x => x.Value);
+			((ITermvectorRequest) this).Document = document;
 			return this;
 		}
 
-		public TermvectorDescriptor<T> PerFieldAnalyzer(Func<FluentDictionary<PropertyPathMarker, string>, FluentDictionary<PropertyPathMarker, string>> analyzerSelector)
-		{
-			Self.PerFieldAnalyzer = analyzerSelector(new FluentDictionary<PropertyPathMarker, string>());
-			return this;
-		}
 		protected override void UpdatePathInfo(IConnectionSettingsValues settings, ElasticsearchPathInfo<TermvectorRequestParameters> pathInfo)
 		{
 			TermvectorPathInfo.Update(settings, pathInfo, this);

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using System;
 
 namespace Nest
 {
@@ -48,11 +47,8 @@ namespace Nest
         [JsonProperty("protected_words_path ")]
         public string ProtectedWordsPath { get; set; }
 
-        [Obsolete("Please switch to TypeTableList property", true)]
-        public string TypeTable { get; set; }
-
         [JsonProperty("type_table")]
-        public List<string> TypeTableList { get; set; }
+        public string TypeTable { get; set; }
 
         [JsonProperty("type_table_path")]
         public string TypeTablePath { get; set; }

@@ -283,32 +283,13 @@ namespace Nest
 			return this.DoCatAsync<ICatFielddataRequest, CatFielddataRequestParameters, CatFielddataRecord>(request, this.RawDispatch.CatFielddataDispatchAsync<CatResponse<CatFielddataRecord>>);
 		}
 
-		public ICatResponse<CatSegmentsRecord> CatSegments(Func<CatSegmentsDescriptor, CatSegmentsDescriptor> selector = null)
-		{
-			return this.DoCat<CatSegmentsDescriptor, CatSegmentsRequestParameters, CatSegmentsRecord>(selector, this.RawDispatch.CatSegmentsDispatch<CatResponse<CatSegmentsRecord>>);
-		}
 
-		public ICatResponse<CatSegmentsRecord> CatSegments(ICatSegmentsRequest request)
-		{
-			return this.DoCat<ICatSegmentsRequest, CatSegmentsRequestParameters, CatSegmentsRecord>(request, this.RawDispatch.CatSegmentsDispatch<CatResponse<CatSegmentsRecord>>);
-		}
-
-		public Task<ICatResponse<CatSegmentsRecord>> CatSegmentsAsync(Func<CatSegmentsDescriptor, CatSegmentsDescriptor> selector = null)
-		{
-			return this.DoCatAsync<CatSegmentsDescriptor, CatSegmentsRequestParameters, CatSegmentsRecord>(selector, this.RawDispatch.CatSegmentsDispatchAsync<CatResponse<CatSegmentsRecord>>);
-		}
-
-		public Task<ICatResponse<CatSegmentsRecord>> CatSegmentsAsync(ICatSegmentsRequest request)
-		{
-			return this.DoCatAsync<ICatSegmentsRequest, CatSegmentsRequestParameters, CatSegmentsRecord>(request, this.RawDispatch.CatSegmentsDispatchAsync<CatResponse<CatSegmentsRecord>>);
-		}
 
 		private CatResponse<TCatRecord> DeserializeCatResponse<TCatRecord>(IElasticsearchResponse response, Stream stream)
 			where TCatRecord : ICatRecord
 		{
 			var records = this.Serializer.Deserialize<IEnumerable<TCatRecord>>(stream);
-			var isValid = response.Success && response.HttpStatusCode == 200;
-			return new CatResponse<TCatRecord> { IsValid = isValid, Records = records };
+			return new CatResponse<TCatRecord>(response) { Records = records };
 		}
 
 
@@ -320,7 +301,7 @@ namespace Nest
 			where TParams : FluentRequestParameters<TParams>, new()
 			where TRequest : class, IRequest<TParams>, new()
 		{
-			return this.Dispatcher.DispatchAsync<TRequest, TParams, CatResponse<TCatRecord>, ICatResponse<TCatRecord>>(
+			return this.DispatchAsync<TRequest, TParams, CatResponse<TCatRecord>, ICatResponse<TCatRecord>>(
 				this.ForceConfiguration(selector, c => c.ContentType = "application/json"),
 				(p, d) => dispatch(p.DeserializationState(
 					new Func<IElasticsearchResponse, Stream, CatResponse<TCatRecord>>(this.DeserializeCatResponse<TCatRecord>))
@@ -336,7 +317,7 @@ namespace Nest
 			where TParams : FluentRequestParameters<TParams>, new()
 			where TRequest : IRequest<TParams> 
 		{
-			return this.Dispatcher.DispatchAsync<TRequest, TParams, CatResponse<TCatRecord>, ICatResponse<TCatRecord>>(
+			return this.DispatchAsync<TRequest, TParams, CatResponse<TCatRecord>, ICatResponse<TCatRecord>>(
 				this.ForceConfiguration(request, c => c.ContentType = "application/json"),
 				(p, d) => dispatch(p.DeserializationState(
 					new Func<IElasticsearchResponse, Stream, CatResponse<TCatRecord>>(this.DeserializeCatResponse<TCatRecord>))
@@ -352,7 +333,7 @@ namespace Nest
 			where TParams : FluentRequestParameters<TParams>, new()
 			where TRequest : class, IRequest<TParams>, new()
 		{
-			return this.Dispatcher.Dispatch<TRequest, TParams, CatResponse<TCatRecord>>(
+			return this.Dispatch<TRequest, TParams, CatResponse<TCatRecord>>(
 				this.ForceConfiguration(selector, c => c.ContentType = "application/json"),
 				(p, d) => dispatch(p.DeserializationState(
 					new Func<IElasticsearchResponse, Stream, CatResponse<TCatRecord>>(this.DeserializeCatResponse<TCatRecord>))
@@ -368,7 +349,7 @@ namespace Nest
 			where TParams : FluentRequestParameters<TParams>, new()
 			where TRequest : IRequest<TParams> 
 		{
-			return this.Dispatcher.Dispatch<TRequest, TParams, CatResponse<TCatRecord>>(
+			return this.Dispatch<TRequest, TParams, CatResponse<TCatRecord>>(
 				this.ForceConfiguration(request, c => c.ContentType = "application/json"),
 				(p, d) => dispatch(p.DeserializationState(
 					new Func<IElasticsearchResponse, Stream, CatResponse<TCatRecord>>(this.DeserializeCatResponse<TCatRecord>))

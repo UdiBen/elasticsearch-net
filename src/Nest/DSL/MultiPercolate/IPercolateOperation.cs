@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Elasticsearch.Net;
-using Nest.Resolvers.Converters;
 using Newtonsoft.Json;
 
 namespace Nest
@@ -33,7 +32,6 @@ namespace Nest
 		QueryContainer Query { get; set; }
 
 		[JsonProperty(PropertyName = "filter")]
-		[JsonConverter(typeof(CompositeJsonConverter<ReadAsTypeConverter<FilterContainer>, CustomJsonConverter>))]
 		FilterContainer Filter { get; set; }
 
 		[JsonProperty(PropertyName = "aggs")]

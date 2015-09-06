@@ -118,7 +118,6 @@ namespace Nest.Tests.Unit.Internals.Inferno
 			};
 
 			Assert.AreEqual(doc.Id, client.Infer.Id<IdPropertyTestWithAttribute>(doc));
-			Assert.AreEqual(doc.Id, client.Infer.Id<IdPropertyTestWithAttribute>(doc));
 		}
 	}
 }

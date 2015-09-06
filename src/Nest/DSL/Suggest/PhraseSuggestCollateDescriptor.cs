@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Nest.Resolvers.Converters;
 
 namespace Nest
 {
@@ -14,7 +13,6 @@ namespace Nest
 		IQueryContainer Query { get; set; }
 
 		[JsonProperty(PropertyName = "filter")]
-		[JsonConverter(typeof(CompositeJsonConverter<ReadAsTypeConverter<FilterContainer>, CustomJsonConverter>))]
 		IFilterContainer Filter { get; set; }
 
 		[JsonProperty(PropertyName = "params")]

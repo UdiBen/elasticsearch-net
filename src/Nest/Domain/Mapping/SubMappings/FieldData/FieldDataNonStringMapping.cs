@@ -11,8 +11,5 @@ namespace Nest
 	{
 		[JsonProperty("format")]
 		public FieldDataNonStringFormat? Format { get; set; }
-
-		[JsonProperty("precision")]
-		public GeoPrecision Precision { get; set; }
 	}
 }

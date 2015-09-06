@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Nest.Domain;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace Nest
 {
@@ -11,10 +9,6 @@ namespace Nest
 		string Type { get; }
 		string Id { get; }
 		string Version { get; }
-		GetFromUpdate Get { get;  }
-
-		T Source<T>() where T : class;
-		FieldSelection<T> Fields<T>() where T : class;
 	}
 
 	[JsonObject]
@@ -31,36 +25,5 @@ namespace Nest
 		public string Id { get; private set; }
 		[JsonProperty(PropertyName = "_version")]
 		public string Version { get; private set; }
-
-		[JsonProperty(PropertyName = "get")]
-		public GetFromUpdate Get { get; private set; }
-
-		public T Source<T>() where T : class
-		{
-			if (this.Get == null) return null;
-			return this.Get.Source.As<T>();
-		}
-
-		public FieldSelection<T> Fields<T>() where T : class
-		{
-			if (this.Get == null) return null;
-			return new FieldSelection<T>(this.Settings, this.Get._fields);
-		}
-	}
-
-	[JsonObject]
-	public class GetFromUpdate
-	{
-		[JsonProperty(PropertyName = "found")]
-		public bool Found { get; set; }
-
-		[JsonProperty(PropertyName = "_source")]
-		internal IDocument Source { get; set; }
-
-
-		[JsonProperty(PropertyName = "fields")]
-		internal IDictionary<string, object> _fields { get; set; }
-
-
 	}
 }

@@ -10,14 +10,10 @@ namespace Nest
 	{
 		[JsonProperty(PropertyName = "index")]
 		public string Index { get; internal set; }
-
-		[JsonProperty(PropertyName = "valid")]
+		[JsonProperty(PropertyName = "description")]
 		public bool Valid { get; internal set; }
-		
 		[JsonProperty(PropertyName = "error")]
 		public string Error { get; internal set; }
 		
-		[JsonProperty(PropertyName = "explanation")]
-		public string Explanation { get; internal set; }
 	}
 }

@@ -65,9 +65,6 @@ namespace Nest
 		[JsonProperty("_timestamp")]
 		public ITimestampFieldMapping TimestampFieldMapping { get; set; }
 
-		[JsonProperty("_field_names")]
-		public IFieldNamesFieldMapping FieldNamesFieldMapping { get; set; }
-
 		[JsonProperty("_ttl")]
 		public ITtlFieldMapping TtlFieldMappingDescriptor { get; set; }
 

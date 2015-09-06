@@ -65,10 +65,7 @@ namespace Elasticsearch.Net.Connection.RequestHandlers
 		{
 			// If the response never recieved a status code and has a caught exception make sure we throw it
 			if (streamResponse.HttpStatusCode.GetValueOrDefault(-1) <= 0 && streamResponse.OriginalException != null)
-			{
-				streamResponse.OriginalException.RethrowKeepingStackTrace();
-				return null; //wont be hit
-			}
+				throw streamResponse.OriginalException;
 
 			// If the user explicitly wants a stream returned the undisposed stream
 			if (typeof(Stream).IsAssignableFrom(typeof(T)))
@@ -161,10 +158,12 @@ namespace Elasticsearch.Net.Connection.RequestHandlers
 			}
 			catch (MaxRetryException)
 			{
+				//TODO ifdef ExceptionDispatchInfo.Capture(ex).Throw();
 				throw;
 			}
 			catch (ElasticsearchServerException)
 			{
+				//TODO ifdef ExceptionDispatchInfo.Capture(ex).Throw();
 				throw;
 			}
 			catch (Exception e)
@@ -172,6 +171,7 @@ namespace Elasticsearch.Net.Connection.RequestHandlers
 				requestState.SeenExceptions.Add(e);
 				if (maxRetries == 0 && retried == 0)
 				{
+					//TODO ifdef ExceptionDispatchInfo.Capture(ex).Throw();
 					throw;
 				}
 				seenError = true;

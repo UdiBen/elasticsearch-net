@@ -33,9 +33,6 @@ namespace Nest
 		[JsonProperty("time_zone")]
 		string TimeZone { get; set; }
 
-		[JsonProperty("format")]
-		string Format { get; set; }
-
 		PropertyPathMarker Field { get; set; }
 	}
 	public class RangeQuery : PlainQuery, IRangeQuery
@@ -64,7 +61,6 @@ namespace Nest
 		public bool? Cache { get; set; }
 		public string Name { get; set; }
 		public string TimeZone { get; set; }
-		public string Format { get; set; }
 		public PropertyPathMarker Field { get; set; }
 	}
 	[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
@@ -85,8 +81,6 @@ namespace Nest
 		bool? IRangeQuery.Cache { get; set; }
 
 		string IRangeQuery.TimeZone { get; set; }
-
-		string IRangeQuery.Format { get; set; }
 
 		PropertyPathMarker IRangeQuery.Field { get; set; }
 		
@@ -188,25 +182,25 @@ namespace Nest
 
 		public RangeQueryDescriptor<T> Greater(DateTime? from, string format = "yyyy-MM-dd'T'HH:mm:ss.fff")
 		{
-			this.Self.GreaterThan = from.HasValue ? from.Value.ToString(format, CultureInfo.InvariantCulture) : null;
+			this.Self.GreaterThan = from.HasValue ? from.Value.ToString(format) : null;
 			return this;
 		}
 
 		public RangeQueryDescriptor<T> GreaterOrEquals(DateTime? from, string format = "yyyy-MM-dd'T'HH:mm:ss.fff")
 		{
-			this.Self.GreaterThanOrEqualTo = from.HasValue ? from.Value.ToString(format, CultureInfo.InvariantCulture) : null;
+			this.Self.GreaterThanOrEqualTo = from.HasValue ? from.Value.ToString(format) : null;
 			return this;
 		}
 
 		public RangeQueryDescriptor<T> Lower(DateTime? to, string format = "yyyy-MM-dd'T'HH:mm:ss.fff")
 		{
-			this.Self.LowerThan = to.HasValue ? to.Value.ToString(format, CultureInfo.InvariantCulture) : null;
+			this.Self.LowerThan = to.HasValue ? to.Value.ToString(format) : null;
 			return this;
 		}
 
 		public RangeQueryDescriptor<T> LowerOrEquals(DateTime? to, string format = "yyyy-MM-dd'T'HH:mm:ss.fff")
 		{
-			this.Self.LowerThanOrEqualTo = to.HasValue ? to.Value.ToString(format, CultureInfo.InvariantCulture) : null;
+			this.Self.LowerThanOrEqualTo = to.HasValue ? to.Value.ToString(format) : null;
 			return this;
 		}
 
@@ -215,13 +209,6 @@ namespace Nest
 			this.Self.TimeZone = timeZone;
 			return this;
 		}
-
-		public RangeQueryDescriptor<T> Format(string format)
-		{
-			this.Self.Format = format;
-			return this;
-		}
-
 
 	}
 }

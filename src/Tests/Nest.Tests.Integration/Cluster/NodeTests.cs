@@ -64,10 +64,10 @@ namespace Nest.Tests.Integration.Cluster
 			);
 			
 			r.IsValid.Should().BeTrue();
-			r.HotThreads.Count.Should().BeGreaterThan(0);
+			r.HotThreads.Count.Should().BeGreaterOrEqualTo(1);
 			var hotThreadInfo = r.HotThreads.First();
 			hotThreadInfo.Node.Should().NotBeNullOrEmpty();
-			hotThreadInfo.Threads.Count.Should().BeGreaterThan(0);
+			hotThreadInfo.Threads.Count.Should().BeGreaterThan(1);
 		}
 	}
 }

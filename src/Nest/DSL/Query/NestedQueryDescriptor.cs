@@ -26,12 +26,6 @@ namespace Nest
 		[JsonProperty("path")]
 		PropertyPathMarker Path { get; set; }
 
-		[JsonProperty("inner_hits")]
-		[JsonConverter(typeof(ReadAsTypeConverter<InnerHits>))]
-		IInnerHits InnerHits { get; set; }
-
-		[JsonProperty(PropertyName = "boost")]
-		double? Boost { get; set; }
 	}
 
 	public class NestedQuery : PlainQuery, INestedQuery
@@ -47,8 +41,6 @@ namespace Nest
 		public IFilterContainer Filter { get; set; }
 		public IQueryContainer Query { get; set; }
 		public PropertyPathMarker Path { get; set; }
-		public IInnerHits InnerHits { get; set; }
-		public double? Boost { get; set; }
 	}
 
 	[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
@@ -64,16 +56,11 @@ namespace Nest
 
 		PropertyPathMarker INestedQuery.Path { get; set; }
 
-		IInnerHits INestedQuery.InnerHits { get; set; }
-
-		double? INestedQuery.Boost { get; set; }
-
 		bool IQuery.IsConditionless
 		{
 			get
 			{
-				return (Self.Query == null || Self.Query.IsConditionless)
-				       && (Self.Filter == null || Self.Filter.IsConditionless);
+				return Self.Query == null || Self.Query.IsConditionless;
 			}
 		}
 
@@ -84,13 +71,6 @@ namespace Nest
 			Self.Name = name;
 			return this;
 		}
-
-		public NestedQueryDescriptor<T> Boost(double boost)
-		{
-			Self.Boost = boost;
-			return this;
-		}
-
 		public NestedQueryDescriptor<T> Filter(Func<FilterDescriptor<T>, FilterContainer> filterSelector)
 		{
 			var q = new FilterDescriptor<T>();
@@ -110,29 +90,14 @@ namespace Nest
 			Self.Score = score;
 			return this;
 		}
-
 		public NestedQueryDescriptor<T> Path(string path)
 		{
 			Self.Path = path;
 			return this;
 		}
-
 		public NestedQueryDescriptor<T> Path(Expression<Func<T, object>> objectPath)
 		{
 			Self.Path = objectPath;
-			return this;
-		}
-
-		public NestedQueryDescriptor<T> InnerHits()
-		{
-			Self.InnerHits = new InnerHits();
-			return this;
-		}
-
-		public NestedQueryDescriptor<T> InnerHits(Func<InnerHitsDescriptor<T>, IInnerHits> innerHitsSelector)
-		{
-			if (innerHitsSelector == null) return this;
-			Self.InnerHits = innerHitsSelector(new InnerHitsDescriptor<T>());
 			return this;
 		}
 	}

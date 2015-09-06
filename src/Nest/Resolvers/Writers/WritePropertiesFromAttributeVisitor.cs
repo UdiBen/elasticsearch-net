@@ -102,11 +102,6 @@ namespace Nest.Resolvers.Writers {
                 this._jsonWriter.WritePropertyName("include_in_all");
                 this._jsonWriter.WriteValue("false");
             }
-	        if (att.IncludeInParent)
-	        {
-				this._jsonWriter.WritePropertyName("include_in_parent");
-				this._jsonWriter.WriteValue(true);
-			}
             if (att.Store)
             {
                 this._jsonWriter.WritePropertyName("store");

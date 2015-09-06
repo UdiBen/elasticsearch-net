@@ -90,7 +90,6 @@ Prior to Elasticsearch 1.0, you could specify to return only certain fields and 
     }
     ...
 
-
 In many case this could be mapped to the type of DTO you give search (i.e in `.Search<DTO>()`). Elasticsearch 1.0 now always returns the fields as arrays.
 
     ...
@@ -100,11 +99,7 @@ In many case this could be mapped to the type of DTO you give search (i.e in `.S
     }
     ...
 
-Previously, Documents was a collection of T with just the specified fields filled in, other fields would be null of have their default value. Now, Documents is an empty collection.
-
-Previously, DocumentsWithMetaData -> Fields would be an instance of T with just the specified fields filled in, other fields would be null or have their default value. Now, Hits -> Fields is (backed by) a dictionary containing only the specified fields.
-
-NEST 1.0 still supports fields, but is now a bit more verbose in how it supports mapping the fields back:
+NEST 1.0 still supports this, but is now a bit more verbose in how it supports mapping the fields back:
 
 
     var fields = _client.Get<DTO>(g => g
@@ -122,8 +117,6 @@ NEST 1.0 still supports fields, but is now a bit more verbose in how it supports
 When you do a search with NEST 0.12, you'd get back a `QueryResponse<T>` with two ways to loop over your results. `.Documents` is an `IEnumerable<T>` and `.DocumentsWithMetaData` is and `IEnumerable<IHit<T>>` depending on your needs one of them might be easier to use.
 
 Starting from NEST 1.0 `.DocumentsWithMetaData` is now called simply `.Hits`.
-
-The old `.Hits` has been renamed to `HitsMetaData`.
 
 ### int Properties
 

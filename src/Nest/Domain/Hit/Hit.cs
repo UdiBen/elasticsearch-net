@@ -20,7 +20,6 @@ namespace Nest
 		HighlightFieldDictionary Highlights { get; }
 		Explanation Explanation { get; }
 		IEnumerable<string> MatchedQueries { get; }
-		IDictionary<string, InnerHitsResult> InnerHits { get; }
 	}
 
 	[JsonObject]
@@ -35,10 +34,6 @@ namespace Nest
 		public T Source { get; internal set; }
 		[JsonProperty(PropertyName = "_index")]
 		public string Index { get; internal set; }
-		
-		[JsonProperty(PropertyName = "inner_hits")]
-		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
-		public IDictionary<string, InnerHitsResult> InnerHits { get; internal set; }
 		
 		//TODO in NEST 2.0 make the property itself double?
 		[JsonProperty(PropertyName = "_score")]

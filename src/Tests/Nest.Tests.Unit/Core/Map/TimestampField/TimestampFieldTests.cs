@@ -25,7 +25,6 @@ namespace Nest.Tests.Unit.Core.Map.TimestampField
 				.TimestampField(a => a
 					.Path("my_difficult_field_name")
 					.Enabled()
-                    .Store()
 				)
 			);
 			this.JsonEquals(result.ConnectionStatus.Request, MethodInfo.GetCurrentMethod());

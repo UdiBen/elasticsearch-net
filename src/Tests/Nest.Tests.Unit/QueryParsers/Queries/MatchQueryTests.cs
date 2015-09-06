@@ -33,7 +33,6 @@ namespace Nest.Tests.Unit.QueryParsers.Queries
 			q.Boost.Should().Be(2.1);
 			q.CutoffFrequency.Should().Be(1.31);
 			q.Fuzziness.Should().Be(2.3);
-			q.FuzzyTranspositions.Should().Be(null);
 			q.Lenient.Should().BeTrue();
 			q.MaxExpansions.Should().Be(2);
 			q.Field.Should().Be("name");
@@ -55,7 +54,6 @@ namespace Nest.Tests.Unit.QueryParsers.Queries
 					.Boost(2.1)
 					.CutoffFrequency(1.31)
 					.Fuzziness(2.3)
-					.FuzzyTranspositions(false)
 					.Lenient()
 					.MaxExpansions(2)
 					.Operator(Operator.And)
@@ -70,7 +68,6 @@ namespace Nest.Tests.Unit.QueryParsers.Queries
 			q.Boost.Should().Be(2.1);
 			q.CutoffFrequency.Should().Be(1.31);
 			q.Fuzziness.Should().Be(2.3);
-			q.FuzzyTranspositions.Should().Be(false);
 			q.Lenient.Should().BeTrue();
 			q.MaxExpansions.Should().Be(2);
 			q.Field.Should().Be("name");
@@ -92,7 +89,6 @@ namespace Nest.Tests.Unit.QueryParsers.Queries
 					.Boost(2.1)
 					.CutoffFrequency(1.31)
 					.Fuzziness(2.3)
-					.FuzzyTranspositions()
 					.Lenient()
 					.MaxExpansions(2)
 					.Operator(Operator.And)
@@ -107,7 +103,6 @@ namespace Nest.Tests.Unit.QueryParsers.Queries
 			q.Boost.Should().Be(2.1);
 			q.CutoffFrequency.Should().Be(1.31);
 			q.Fuzziness.Should().Be(2.3);
-			q.FuzzyTranspositions.Should().Be(true);
 			q.Lenient.Should().BeTrue();
 			q.MaxExpansions.Should().Be(2);
 			q.Field.Should().Be("name");

@@ -15,9 +15,6 @@ namespace Nest
 		[JsonProperty("flags")]
 		string Flags { get; set; }
 
-		[JsonProperty(PropertyName = "max_determinized_states")]
-		int? MaximumDeterminizedStates { get; set; }
-
 	}
 
 	public class RegexpFilter : PlainFilter, IRegexpFilter
@@ -29,19 +26,14 @@ namespace Nest
 
 		public string Value { get; set; }
 		public string Flags { get; set; }
-		public int? MaximumDeterminizedStates { get; set; }
 		public PropertyPathMarker Field { get; set; }
 	}
 
 	public class RegexpFilterDescriptor<T> : FilterBase, IRegexpFilter where T : class
 	{
-		private IRegexpFilter Self { get { return this; }}
-
 		string IRegexpFilter.Value { get; set; }
 
 		string IRegexpFilter.Flags { get; set; }
-
-		int? IRegexpFilter.MaximumDeterminizedStates { get; set; }
 
 		PropertyPathMarker IFieldNameFilter.Field { get; set; }
 
@@ -49,33 +41,28 @@ namespace Nest
 		{
 			get
 			{
-				return Self.Field.IsConditionless() || Self.Value.IsNullOrEmpty();
+				return ((IRegexpFilter)this).Field.IsConditionless() || ((IRegexpFilter)this).Value.IsNullOrEmpty();
 			}
 		}
 
 		public RegexpFilterDescriptor<T> Value(string regex)
 		{
-			Self.Value = regex;
+			((IRegexpFilter)this).Value = regex;
 			return this;
 		}
 		public RegexpFilterDescriptor<T> Flags(string flags)
 		{
-			Self.Flags = flags;
-			return this;
-		}
-		public RegexpFilterDescriptor<T> MaximumDeterminizedStates(int maxDeterminizedStates)
-		{
-			Self.MaximumDeterminizedStates = maxDeterminizedStates;
+			((IRegexpFilter)this).Flags = flags;
 			return this;
 		}
 		public RegexpFilterDescriptor<T> OnField(string path)
 		{
-			Self.Field = path;
+			((IRegexpFilter)this).Field = path;
 			return this;
 		}
 		public RegexpFilterDescriptor<T> OnField(Expression<Func<T, object>> objectPath)
 		{
-			Self.Field = objectPath;
+			((IRegexpFilter)this).Field = objectPath;
 			return this;
 		}
 

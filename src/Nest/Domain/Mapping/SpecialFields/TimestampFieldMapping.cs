@@ -16,15 +16,6 @@ namespace Nest
 
 		[JsonProperty("format")]
 		string Format { get; set; }
-
-		[JsonProperty("default")]
-		string Default { get; set; }
-
-		[JsonProperty("ignore_missing")]
-		bool? IgnoreMissing { get; set; }
-		
-		[JsonProperty("store")]
-		bool? Store { get; set; }
 	}
 
 	public class TimestampFieldMapping : ITimestampFieldMapping
@@ -34,9 +25,6 @@ namespace Nest
 		public PropertyPathMarker Path { get; set; }
 
 		public string Format { get; set; }
-		public string Default { get; set; }
-		public bool? IgnoreMissing { get; set; }
-		public bool? Store { get; set; }
 	}
 
 
@@ -49,22 +37,12 @@ namespace Nest
 		PropertyPathMarker ITimestampFieldMapping.Path { get; set;}
 
 		string ITimestampFieldMapping.Format { get; set; }
-		string ITimestampFieldMapping.Default { get; set; }
-		bool? ITimestampFieldMapping.IgnoreMissing { get; set; }
-		bool? ITimestampFieldMapping.Store { get; set; }
 
 		public TimestampFieldMappingDescriptor<T> Enabled(bool enabled = true)
 		{
 			Self.Enabled = enabled;
 			return this;
 		}
-		
-		public TimestampFieldMappingDescriptor<T> Store(bool store = true)
-		{
-			Self.Store = store;
-			return this;
-		}
-		
 		public TimestampFieldMappingDescriptor<T> Path(string path)
 		{
 			Self.Path = path;
@@ -76,22 +54,9 @@ namespace Nest
 			Self.Path = objectPath;
 			return this;
 		}
-
 		public TimestampFieldMappingDescriptor<T> Format(string format)
 		{
 			Self.Format = format;
-			return this;
-		}
-
-		public TimestampFieldMappingDescriptor<T> Default(string defaultValue)
-		{
-			Self.Default = defaultValue;
-			return this;
-		}
-
-		public TimestampFieldMappingDescriptor<T> IgnoreMissing(bool ignoreMissing = true)
-		{
-			Self.IgnoreMissing = ignoreMissing;
 			return this;
 		}
 

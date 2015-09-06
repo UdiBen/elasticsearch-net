@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Nest.Resolvers.Converters;
 using Newtonsoft.Json;
-using Nest.Resolvers.Converters.Queries;
 
 namespace Nest
 {
 	[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
-	[JsonConverter(typeof(DismaxQueryJsonConverter))]
+	[JsonConverter(typeof(ReadAsTypeConverter<DisMaxQueryDescriptor<object>>))]
 	public interface IDisMaxQuery : IQuery
 	{
 		[JsonProperty(PropertyName = "tie_breaker")]
@@ -74,25 +73,11 @@ namespace Nest
 			return this;
 		}
 
-		public DisMaxQueryDescriptor<T> Queries(params QueryContainer[] queries)
-		{
-			var descriptors = new List<QueryContainer>();
-			foreach (var q in queries)
-			{
-				if (q.IsConditionless)
-					continue;
-				descriptors.Add(q);
-			}
-			((IDisMaxQuery)this).Queries = descriptors.HasAny() ? descriptors : null;
-			return this;
-		}
-
 		public DisMaxQueryDescriptor<T> Boost(double boost)
 		{
 			Self.Boost = boost;
 			return this;
 		}
-
 		public DisMaxQueryDescriptor<T> TieBreaker(double tieBreaker)
 		{
 			Self.TieBreaker = tieBreaker;

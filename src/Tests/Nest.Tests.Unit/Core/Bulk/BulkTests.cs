@@ -28,9 +28,6 @@ namespace Nest.Tests.Unit.Core.Bulk
 					.IdFrom(new ElasticsearchProject { Id = 3 })
 					.VersionType(VersionType.External)
 					.Doc(new { name = "NEST"})
-					.ScriptFile("myfile")
-					.ScriptId("myscript")
-					.Lang("groovy")
 				)
 			);
 			var status = result.ConnectionStatus;
@@ -59,10 +56,7 @@ namespace Nest.Tests.Unit.Core.Bulk
 					{ new BulkUpdateOperation<ElasticsearchProject, object>(new ElasticsearchProject { Id = 3})
 					{
 						VersionType = VersionType.External,
-						Doc = new { name = "NEST"},
-						ScriptFile = "myfile",
-						ScriptId = "myscript",
-						Lang = "groovy"
+						Doc = new { name = "NEST"}
 					}},
 				}
 			});

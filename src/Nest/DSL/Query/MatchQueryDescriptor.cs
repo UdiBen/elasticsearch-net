@@ -29,9 +29,6 @@ namespace Nest
 		[JsonProperty(PropertyName = "fuzziness")]
 		double? Fuzziness { get; set; }
 
-		[JsonProperty(PropertyName = "fuzzy_transpositions")]
-		bool? FuzzyTranspositions { get; set; }
-
 		[JsonProperty(PropertyName = "cutoff_frequency")]
 		double? CutoffFrequency { get; set; }
 
@@ -85,7 +82,6 @@ namespace Nest
 		public string Analyzer { get; set; }
 		public RewriteMultiTerm? Rewrite { get; set; }
 		public double? Fuzziness { get; set; }
-		public bool? FuzzyTranspositions { get; set; }
 		public double? CutoffFrequency { get; set; }
 		public int? PrefixLength { get; set; }
 		public int? MaxExpansions { get; set; }
@@ -116,7 +112,6 @@ namespace Nest
 		RewriteMultiTerm? IMatchQuery.Rewrite { get; set; }
 
 		double? IMatchQuery.Fuzziness { get; set; }
-		bool? IMatchQuery.FuzzyTranspositions { get; set; }
 
 		double? IMatchQuery.CutoffFrequency { get; set; }
 
@@ -192,13 +187,7 @@ namespace Nest
 			Self.Fuzziness = fuzziness;
 			return this;
 		}
-
-		public MatchQueryDescriptor<T> FuzzyTranspositions(bool fuzzyTranspositions = true)
-		{
-			Self.FuzzyTranspositions = fuzzyTranspositions;
-			return this;
-		}
-
+		
 		public MatchQueryDescriptor<T> CutoffFrequency(double cutoffFrequency)
 		{
 			Self.CutoffFrequency = cutoffFrequency;

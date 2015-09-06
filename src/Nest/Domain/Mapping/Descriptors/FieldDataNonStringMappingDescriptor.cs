@@ -33,11 +33,5 @@ namespace Nest
 			this.FieldData.Filter = selector.Filter;
 			return this;
 		}
-
-		public FieldDataNonStringMappingDescriptor Precision(double precision, GeoPrecisionUnit unit)
-		{
-			this.FieldData.Precision = new GeoPrecision(precision, unit);
-			return this;
-		}
 	}
 }

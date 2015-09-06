@@ -85,6 +85,8 @@ namespace Nest
 			return DeserializeUsingSettings<T>(stream, settings);
 		}
 
+	
+
 		/// <summary>
 		/// Deserialize to type T bypassing checks for custom deserialization state and or BaseResponse return types.
 		/// </summary>

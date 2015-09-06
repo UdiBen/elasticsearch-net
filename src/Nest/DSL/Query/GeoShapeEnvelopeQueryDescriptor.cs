@@ -15,9 +15,6 @@ namespace Nest
 	{
 		[JsonProperty("shape")]
 		IEnvelopeGeoShape Shape { get; set; }
-
-		[JsonProperty(PropertyName = "boost")]
-		double? Boost { get; set; }
 	}
 
 	public class GeoShapeEnvelopeQuery : PlainQuery, IGeoShapeEnvelopeQuery
@@ -28,9 +25,6 @@ namespace Nest
 		}
 
 		public string Name { get; set; }
-
-		public double? Boost { get; set; }
-
 		bool IQuery.IsConditionless { get { return false; } }
 
 		PropertyPathMarker IFieldNameQuery.GetFieldName()
@@ -56,8 +50,6 @@ namespace Nest
 		
 		IEnvelopeGeoShape IGeoShapeEnvelopeQuery.Shape { get; set; }
 
-		double? IGeoShapeEnvelopeQuery.Boost { get; set; }
-
 		bool IQuery.IsConditionless
 		{
 			get
@@ -72,7 +64,6 @@ namespace Nest
 		{
 			Self.Field = fieldName;
 		}
-
 		PropertyPathMarker IFieldNameQuery.GetFieldName()
 		{
 			return Self.Field;
@@ -81,12 +72,6 @@ namespace Nest
 		public GeoShapeEnvelopeQueryDescriptor<T> Name(string name)
 		{
 			Self.Name = name;
-			return this;
-		}
-		
-		public GeoShapeEnvelopeQueryDescriptor<T> Boost(double boost)
-		{
-			Self.Boost = boost;
 			return this;
 		}
 		

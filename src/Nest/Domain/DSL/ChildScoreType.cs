@@ -17,8 +17,6 @@ namespace Nest
 		[EnumMember(Value = "sum")]
 		Sum,
 		[EnumMember(Value = "max")]
-		Max,
-		[EnumMember(Value = "min")]
-		Min
+		Max
 	}
 }

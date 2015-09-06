@@ -1,6 +1,6 @@
 {
   "indices.get_upgrade": {
-    "documentation": "http://www.elastic.co/guide/en/elasticsearch/reference/master/indices-upgrade.html",
+    "documentation": "http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/indices-upgrade.html",
     "methods": ["GET"],
     "url": {
       "path": "/_upgrade",
@@ -22,7 +22,7 @@
         },
         "expand_wildcards": {
             "type" : "enum",
-            "options" : ["open","closed","none","all"],
+            "options" : ["open","closed"],
             "default" : "open",
             "description" : "Whether to expand wildcard expression to concrete indices that are open, closed or both."
         },

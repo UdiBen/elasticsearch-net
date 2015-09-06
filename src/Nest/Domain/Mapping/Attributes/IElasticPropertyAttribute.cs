@@ -20,7 +20,6 @@
         bool OmitNorms { get; set; }
         bool OmitTermFrequencyAndPositions { get; set; }
         bool IncludeInAll { get; set; }
-		bool IncludeInParent { get; set; }
         bool Store { get; set; }
 
         bool DocValues { get; set; }

@@ -40,12 +40,6 @@ namespace Nest
 		[JsonProperty("gnd")]
 		GoogleNormalizedDistanceHeuristic GoogleNormalizedDistance { get; set; }
 
-		[JsonProperty("percentage")]
-		PercentageScoreHeuristic PercentageScore { get; set; }
-
-		[JsonProperty("script_heuristic")]
-		ScriptedHeuristic Script { get; set; }
-
 		[JsonProperty("background_filter")]
 		IFilterContainer BackgroundFilter { get; set; }
 
@@ -63,8 +57,6 @@ namespace Nest
 		public MutualInformationHeuristic MutualInformation { get; set; }
 		public ChiSquareHeuristic ChiSquare { get; set; }
 		public GoogleNormalizedDistanceHeuristic GoogleNormalizedDistance { get; set; }
-		public PercentageScoreHeuristic PercentageScore { get; set; }
-		public ScriptedHeuristic Script { get; set; }
 		public IFilterContainer BackgroundFilter { get; set; }
 	}
 
@@ -91,10 +83,6 @@ namespace Nest
 		ChiSquareHeuristic ISignificantTermsAggregator.ChiSquare { get; set; }
 
 		GoogleNormalizedDistanceHeuristic ISignificantTermsAggregator.GoogleNormalizedDistance { get; set; }
-
-		PercentageScoreHeuristic ISignificantTermsAggregator.PercentageScore { get; set; }
-
-		ScriptedHeuristic ISignificantTermsAggregator.Script { get; set; }
 
 		IFilterContainer ISignificantTermsAggregator.BackgroundFilter { get; set; }
 
@@ -176,18 +164,6 @@ namespace Nest
 			{
 				BackgroundIsSuperSet = backgroundIsSuperSet,
 			};
-			return this;
-		}
-
-		public SignificantTermsAggregationDescriptor<T> PercentageScore()
-		{
-			this.Self.PercentageScore = new PercentageScoreHeuristic();
-			return this;
-		}
-
-		public SignificantTermsAggregationDescriptor<T> Script(Func<ScriptedHeuristicDescriptor, ScriptedHeuristicDescriptor> scriptSelector)
-		{
-			this.Self.Script = scriptSelector(new ScriptedHeuristicDescriptor()).ScriptedHeuristic;
 			return this;
 		}
 

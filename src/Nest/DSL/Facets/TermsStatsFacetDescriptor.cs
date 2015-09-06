@@ -34,9 +34,6 @@ namespace Nest
 		[JsonProperty(PropertyName = "size")]
 		int? Size { get; set; }
 
-		[JsonProperty(PropertyName = "shard_size")]
-		int? ShardSize { get; set; }
-
 		[JsonProperty(PropertyName = "params")]
 		[JsonConverter(typeof (DictionaryKeysAreNotPropertyNamesJsonConverter))]
 		Dictionary<string, object> Params { get; set; }
@@ -51,7 +48,6 @@ namespace Nest
 		public TermsStatsOrder? Order { get; set; }
 		public string Lang { get; set; }
 		public int? Size { get; set; }
-		public int? ShardSize { get; set; }
 		public Dictionary<string, object> Params { get; set; }
 	}
 
@@ -72,8 +68,6 @@ namespace Nest
 		string ITermsStatsFacetRequest.Lang { get; set; }
 
 		int? ITermsStatsFacetRequest.Size { get; set; }
-
-		int? ITermsStatsFacetRequest.ShardSize { get; set; }
 
 		Dictionary<string, object> ITermsStatsFacetRequest.Params { get; set; }
 
@@ -117,11 +111,6 @@ namespace Nest
 		{
 			language.ThrowIfNull("language");
 			Self.Lang = language;
-			return this;
-		}
-		public TermsStatsFacetDescriptor<T> ShardSize(int shardSize)
-		{
-			Self.ShardSize = shardSize;
 			return this;
 		}
 		public TermsStatsFacetDescriptor<T> Size(int size)

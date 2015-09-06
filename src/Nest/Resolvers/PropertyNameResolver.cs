@@ -8,8 +8,6 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Collections.Concurrent;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 
 namespace Nest.Resolvers
 {
@@ -132,12 +130,9 @@ namespace Nest.Resolvers
 		{
 			if (m.Method.Name == "Suffix" && m.Arguments.Any())
 			{
-				VisitConstantOrVariable(m, stack);
-				var callingMember = new ReadOnlyCollection<Expression>(
-					new List<Expression> {{m.Arguments.First()}}
-				);
-				base.VisitExpressionList(callingMember, stack, properties);
-				return m;
+				var constantExpression = m.Arguments.Last() as ConstantExpression;
+				if (constantExpression != null)
+					stack.Push(constantExpression.Value as string);
 			}
 			else if (m.Method.Name == "FullyQualified" && m.Arguments.Any())
 			{
@@ -147,21 +142,20 @@ namespace Nest.Resolvers
 			}
 			else if (m.Method.Name == "get_Item" && m.Arguments.Any())
 			{
-				var t = m.Object.Type;
-				var isDict = 
-					typeof(IDictionary).IsAssignableFrom(t)
-					|| typeof(IDictionary<,>).IsAssignableFrom(t)
-					|| (t.IsGenericType && t.GetGenericTypeDefinition() == typeof (IDictionary<,>));
-
-				if (!isDict)
+				if (!typeof(IDictionary).IsAssignableFrom(m.Object.Type))
 				{
 					return base.VisitMethodCall(m, stack, properties);
 				}
-				VisitConstantOrVariable(m, stack);
+				var lastArg = m.Arguments.Last();
+				var constantExpression = lastArg as ConstantExpression;
+				var value = constantExpression != null
+					? constantExpression.Value.ToString()
+					: Expression.Lambda(lastArg).Compile().DynamicInvoke().ToString();
+				stack.Push(value);
 				Visit(m.Object, stack, properties);
 				return m;
 			}
-			else if (IsLinqOperator(m.Method))
+			if (IsLinqOperator(m.Method))
 			{
 				for (int i = 1; i < m.Arguments.Count; i++)
 				{
@@ -171,16 +165,6 @@ namespace Nest.Resolvers
 				return m;
 			}
 			return base.VisitMethodCall(m, stack, properties);
-		}
-
-		private static void VisitConstantOrVariable(MethodCallExpression m, Stack<string> stack)
-		{
-			var lastArg = m.Arguments.Last();
-			var constantExpression = lastArg as ConstantExpression;
-			var value = constantExpression != null
-				? constantExpression.Value.ToString()
-				: Expression.Lambda(lastArg).Compile().DynamicInvoke().ToString();
-			stack.Push(value);
 		}
 		
 		private static bool IsLinqOperator(MethodInfo method)

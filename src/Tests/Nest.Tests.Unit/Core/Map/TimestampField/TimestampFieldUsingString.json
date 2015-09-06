@@ -2,8 +2,7 @@
   "elasticsearchprojects": {
     "_timestamp": {
       "enabled": true,
-        "path": "my_difficult_field_name",
-        "store":  true
+      "path": "my_difficult_field_name"
     }
   }
 }

@@ -19,8 +19,5 @@ namespace Nest
 
 		[JsonProperty("size_to_upgrade_in_bytes")]
 		public string SizeToUpgradeInBytes { get; set; }
-
-		[JsonProperty("size_to_upgrade_ancient_in_bytes")]
-		public string SizeToUpgradeAncientInBytes { get; set; }
 	}
 }

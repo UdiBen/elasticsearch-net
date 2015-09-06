@@ -21,22 +21,6 @@ namespace Nest
 	{
 		
 	
-
-		///<summary>The URL-encoded request definition</summary>
-		public AbortBenchmarkDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public AbortBenchmarkDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 		
 		protected override void UpdatePathInfo(IConnectionSettingsValues settings, ElasticsearchPathInfo<AbortBenchmarkRequestParameters> pathInfo)
 		{
@@ -49,7 +33,7 @@ namespace Nest
 	
 	///<summary>descriptor for Bulk
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-bulk.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/docs-bulk.html
 	///</pre>
 	///</summary>
 	public partial class BulkDescriptor 
@@ -104,29 +88,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public BulkDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public BulkDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatAliases
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-alias.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-alias.html
 	///</pre>
 	///</summary>
 	public partial class CatAliasesDescriptor 
@@ -173,29 +141,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatAliasesDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatAliasesDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatAllocation
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-allocation.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-allocation.html
 	///</pre>
 	///</summary>
 	public partial class CatAllocationDescriptor 
@@ -250,29 +202,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatAllocationDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatAllocationDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatCount
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-count.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-count.html
 	///</pre>
 	///</summary>
 	public partial class CatCountDescriptor 
@@ -319,29 +255,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatCountDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatCountDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatFielddata
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/cat-fielddata.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/cat-fielddata.html
 	///</pre>
 	///</summary>
 	public partial class CatFielddataDescriptor 
@@ -415,29 +335,13 @@ namespace Nest
 			return this;
 		}
 			
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatFielddataDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatFielddataDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatHealth
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-health.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-health.html
 	///</pre>
 	///</summary>
 	public partial class CatHealthDescriptor 
@@ -492,29 +396,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatHealthDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatHealthDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatHelp
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat.html
 	///</pre>
 	///</summary>
 	public partial class CatHelpDescriptor  : BaseRequest<CatHelpRequestParameters>
@@ -526,22 +414,6 @@ namespace Nest
 		public CatHelpDescriptor Help(bool help = true)
 		{
 			this.Request.RequestParameters.Help(help);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatHelpDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatHelpDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
 			return this;
 		}
 		
@@ -557,7 +429,7 @@ namespace Nest
 	
 	///<summary>descriptor for CatIndices
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-indices.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-indices.html
 	///</pre>
 	///</summary>
 	public partial class CatIndicesDescriptor 
@@ -620,29 +492,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatIndicesDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatIndicesDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatMaster
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-master.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-master.html
 	///</pre>
 	///</summary>
 	public partial class CatMasterDescriptor 
@@ -689,29 +545,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatMasterDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatMasterDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatNodes
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-nodes.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-nodes.html
 	///</pre>
 	///</summary>
 	public partial class CatNodesDescriptor 
@@ -758,29 +598,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatNodesDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatNodesDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatPendingTasks
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-pending-tasks.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-pending-tasks.html
 	///</pre>
 	///</summary>
 	public partial class CatPendingTasksDescriptor 
@@ -827,29 +651,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatPendingTasksDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatPendingTasksDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatPlugins
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/cat-plugins.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/cat-plugins.html
 	///</pre>
 	///</summary>
 	public partial class CatPluginsDescriptor 
@@ -896,29 +704,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatPluginsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatPluginsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatRecovery
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-recovery.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-recovery.html
 	///</pre>
 	///</summary>
 	public partial class CatRecoveryDescriptor 
@@ -965,82 +757,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatRecoveryDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatRecoveryDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
-	
-	}
-	
-	
-	///<summary>descriptor for CatSegments
-	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/cat-segments.html
-	///</pre>
-	///</summary>
-	public partial class CatSegmentsDescriptor 
-	{
-		
-	
-
-		///<summary>Comma-separated list of column names to display</summary>
-		public CatSegmentsDescriptor H(params string[] h)
-		{
-			this.Request.RequestParameters.H(h);
-			return this;
-		}
-		
-
-		///<summary>Return help information</summary>
-		public CatSegmentsDescriptor Help(bool help = true)
-		{
-			this.Request.RequestParameters.Help(help);
-			return this;
-		}
-		
-
-		///<summary>Verbose mode. Display column headers</summary>
-		public CatSegmentsDescriptor V(bool v = true)
-		{
-			this.Request.RequestParameters.V(v);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatSegmentsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatSegmentsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatShards
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cat-shards.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cat-shards.html
 	///</pre>
 	///</summary>
 	public partial class CatShardsDescriptor 
@@ -1087,29 +810,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatShardsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatShardsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for CatThreadPool
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/cat-thread-pool.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/cat-thread-pool.html
 	///</pre>
 	///</summary>
 	public partial class CatThreadPoolDescriptor 
@@ -1164,58 +871,26 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CatThreadPoolDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CatThreadPoolDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ClearScroll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-request-scroll.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-request-scroll.html
 	///</pre>
 	///</summary>
 	public partial class ClearScrollDescriptor 
 	{
 		
 	
-
-		///<summary>The URL-encoded request definition</summary>
-		public ClearScrollDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ClearScrollDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ClusterGetSettings
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-update-settings.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-update-settings.html
 	///</pre>
 	///</summary>
 	public partial class ClusterGetSettingsDescriptor 
@@ -1246,29 +921,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public ClusterGetSettingsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ClusterGetSettingsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ClusterHealth
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-health.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-health.html
 	///</pre>
 	///</summary>
 	public partial class ClusterHealthDescriptor 
@@ -1339,29 +998,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public ClusterHealthDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ClusterHealthDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ClusterPendingTasks
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-pending.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-pending.html
 	///</pre>
 	///</summary>
 	public partial class ClusterPendingTasksDescriptor 
@@ -1384,29 +1027,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public ClusterPendingTasksDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ClusterPendingTasksDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ClusterPutSettings
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-update-settings.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-update-settings.html
 	///</pre>
 	///</summary>
 	public partial class ClusterSettingsDescriptor 
@@ -1421,45 +1048,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>Explicit operation timeout for connection to master node</summary>
-		public ClusterSettingsDescriptor MasterTimeout(string master_timeout)
-		{
-			this.Request.RequestParameters.MasterTimeout(master_timeout);
-			return this;
-		}
-		
-
-		///<summary>Explicit operation timeout</summary>
-		public ClusterSettingsDescriptor Timeout(string timeout)
-		{
-			this.Request.RequestParameters.Timeout(timeout);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public ClusterSettingsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ClusterSettingsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ClusterReroute
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-reroute.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-reroute.html
 	///</pre>
 	///</summary>
 	public partial class ClusterRerouteDescriptor 
@@ -1506,29 +1101,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public ClusterRerouteDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ClusterRerouteDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ClusterState
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-state.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-state.html
 	///</pre>
 	///</summary>
 	public partial class ClusterStateDescriptor 
@@ -1559,53 +1138,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>Whether specified concrete indices should be ignored when unavailable (missing or closed)</summary>
-		public ClusterStateDescriptor IgnoreUnavailable(bool ignore_unavailable = true)
-		{
-			this.Request.RequestParameters.IgnoreUnavailable(ignore_unavailable);
-			return this;
-		}
-		
-
-		///<summary>Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)</summary>
-		public ClusterStateDescriptor AllowNoIndices(bool allow_no_indices = true)
-		{
-			this.Request.RequestParameters.AllowNoIndices(allow_no_indices);
-			return this;
-		}
-		
-
-		///<summary>Whether to expand wildcard expression to concrete indices that are open, closed or both.</summary>
-		public ClusterStateDescriptor ExpandWildcards(ExpandWildcards expand_wildcards)
-		{
-			this.Request.RequestParameters.ExpandWildcards(expand_wildcards);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public ClusterStateDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ClusterStateDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ClusterStats
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-stats.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-stats.html
 	///</pre>
 	///</summary>
 	public partial class ClusterStatsDescriptor 
@@ -1628,29 +1167,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public ClusterStatsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ClusterStatsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for Count
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-count.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-count.html
 	///</pre>
 	///</summary>
 	public partial class CountDescriptor<T> 
@@ -1706,74 +1229,10 @@ namespace Nest
 		}
 		
 
-		///<summary>Query in the Lucene query string syntax</summary>
-		public CountDescriptor<T> Q(string q)
-		{
-			this.Request.RequestParameters.Q(q);
-			return this;
-		}
-		
-
-		///<summary>The analyzer to use for the query string</summary>
-		public CountDescriptor<T> Analyzer(string analyzer)
-		{
-			this.Request.RequestParameters.Analyzer(analyzer);
-			return this;
-		}
-		
-
-		///<summary>Specify whether wildcard and prefix queries should be analyzed (default: false)</summary>
-		public CountDescriptor<T> AnalyzeWildcard(bool analyze_wildcard = true)
-		{
-			this.Request.RequestParameters.AnalyzeWildcard(analyze_wildcard);
-			return this;
-		}
-		
-
-		///<summary>The default operator for query string query (AND or OR)</summary>
-		public CountDescriptor<T> DefaultOperator(DefaultOperator default_operator)
-		{
-			this.Request.RequestParameters.DefaultOperator(default_operator);
-			return this;
-		}
-		
-
-		///<summary>The field to use as default where no field prefix is given in the query string</summary>
-		public CountDescriptor<T> Df(string df)
-		{
-			this.Request.RequestParameters.Df(df);
-			return this;
-		}
-		
-
-		///<summary>Specify whether format-based query failures (such as providing text to a numeric field) should be ignored</summary>
-		public CountDescriptor<T> Lenient(bool lenient = true)
-		{
-			this.Request.RequestParameters.Lenient(lenient);
-			return this;
-		}
-		
-
-		///<summary>Specify whether query terms should be lowercased</summary>
-		public CountDescriptor<T> LowercaseExpandedTerms(bool lowercase_expanded_terms = true)
-		{
-			this.Request.RequestParameters.LowercaseExpandedTerms(lowercase_expanded_terms);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
+		///<summary>The URL-encoded query definition (instead of using the request body)</summary>
 		public CountDescriptor<T> Source(string source)
 		{
 			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CountDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
 			return this;
 		}
 		
@@ -1783,7 +1242,7 @@ namespace Nest
 	
 	///<summary>descriptor for CountPercolateGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-percolate.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-percolate.html
 	///</pre>
 	///</summary>
 	public partial class PercolateCountDescriptor<T> 
@@ -1862,29 +1321,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public PercolateCountDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public PercolateCountDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for Delete
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-delete.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/docs-delete.html
 	///</pre>
 	///</summary>
 	public partial class DeleteDescriptor<T> 
@@ -1955,29 +1398,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DeleteDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for DeleteByQuery
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-delete-by-query.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/docs-delete-by-query.html
 	///</pre>
 	///</summary>
 	public partial class DeleteByQueryDescriptor<T> 
@@ -2065,15 +1492,7 @@ namespace Nest
 		}
 		
 
-		///<summary>Explicit operation timeout</summary>
-		public DeleteByQueryDescriptor<T> Timeout(string timeout)
-		{
-			this.Request.RequestParameters.Timeout(timeout);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
+		///<summary>The URL-encoded query definition (instead of using the request body)</summary>
 		public DeleteByQueryDescriptor<T> Source(string source)
 		{
 			this.Request.RequestParameters.Source(source);
@@ -2081,10 +1500,10 @@ namespace Nest
 		}
 		
 
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteByQueryDescriptor<T> FilterPath(string filter_path)
+		///<summary>Explicit operation timeout</summary>
+		public DeleteByQueryDescriptor<T> Timeout(string timeout)
 		{
-			this.Request.RequestParameters.FilterPath(filter_path);
+			this.Request.RequestParameters.Timeout(timeout);
 			return this;
 		}
 		
@@ -2094,7 +1513,7 @@ namespace Nest
 	
 	///<summary>descriptor for DeleteScript
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/modules-scripting.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/modules-scripting.html
 	///</pre>
 	///</summary>
 	public partial class DeleteScriptDescriptor 
@@ -2117,29 +1536,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DeleteScriptDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteScriptDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for DeleteTemplate
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/search-template.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/search-template.html
 	///</pre>
 	///</summary>
 	public partial class DeleteTemplateDescriptor 
@@ -2162,29 +1565,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DeleteTemplateDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteTemplateDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for Exists
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-get.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/docs-get.html
 	///</pre>
 	///</summary>
 	public partial class DocumentExistsDescriptor<T> 
@@ -2231,29 +1618,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DocumentExistsDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DocumentExistsDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ExplainGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-explain.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-explain.html
 	///</pre>
 	///</summary>
 	public partial class ExplainDescriptor<T> 
@@ -2360,6 +1731,14 @@ namespace Nest
 		}
 		
 
+		///<summary>The URL-encoded query definition (instead of using the request body)</summary>
+		public ExplainDescriptor<T> Source(string source)
+		{
+			this.Request.RequestParameters.Source(source);
+			return this;
+		}
+		
+
 		///<summary>True or false to return the _source field or not, or a list of fields to return</summary>
 		[Obsolete("Scheduled to be removed in 2.0, use EnableSource instead")]
 		public ExplainDescriptor<T> SourceEnabled(params string[] source_enabled)
@@ -2414,109 +1793,13 @@ namespace Nest
 			return this;
 		}
 			
-
-		///<summary>The URL-encoded request definition</summary>
-		public ExplainDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ExplainDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
-	
-	}
-	
-	
-	///<summary>descriptor for FieldStatsGet
-	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/search-field-stats.html
-	///</pre>
-	///</summary>
-	public partial class FieldStatsDescriptor 
-	{
-		
-	
-
-		///<summary>A comma-separated list of fields for to get field statistics for (min value, max value, and more)</summary>
-		public FieldStatsDescriptor Fields(params string[] fields)
-		{
-			this.Request.RequestParameters.Fields(fields);
-			return this;
-		}
-		
-			
-		///<summary>A comma-separated list of fields for to get field statistics for (min value, max value, and more)</summary>
-		public FieldStatsDescriptor Fields<T>(params Expression<Func<T, object>>[] typedPathLookups) where T : class
-		{
-			if (!typedPathLookups.HasAny())
-				return this;
-
-			this.Request.RequestParameters._Fields(typedPathLookups);
-			return this;
-		}
-			
-
-		///<summary>Defines if field stats should be returned on a per index level or on a cluster wide level</summary>
-		public FieldStatsDescriptor Level(Level level)
-		{
-			this.Request.RequestParameters.Level(level);
-			return this;
-		}
-		
-
-		///<summary>Whether specified concrete indices should be ignored when unavailable (missing or closed)</summary>
-		public FieldStatsDescriptor IgnoreUnavailable(bool ignore_unavailable = true)
-		{
-			this.Request.RequestParameters.IgnoreUnavailable(ignore_unavailable);
-			return this;
-		}
-		
-
-		///<summary>Whether to ignore if a wildcard indices expression resolves into no concrete indices. (This includes `_all` string or when no indices have been specified)</summary>
-		public FieldStatsDescriptor AllowNoIndices(bool allow_no_indices = true)
-		{
-			this.Request.RequestParameters.AllowNoIndices(allow_no_indices);
-			return this;
-		}
-		
-
-		///<summary>Whether to expand wildcard expression to concrete indices that are open, closed or both.</summary>
-		public FieldStatsDescriptor ExpandWildcards(ExpandWildcards expand_wildcards)
-		{
-			this.Request.RequestParameters.ExpandWildcards(expand_wildcards);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public FieldStatsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public FieldStatsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for Get
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-get.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/docs-get.html
 	///</pre>
 	///</summary>
 	public partial class GetDescriptor<T> 
@@ -2653,29 +1936,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for GetScript
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/modules-scripting.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/modules-scripting.html
 	///</pre>
 	///</summary>
 	public partial class GetScriptDescriptor 
@@ -2698,29 +1965,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetScriptDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetScriptDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for GetSource
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-get.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/docs-get.html
 	///</pre>
 	///</summary>
 	public partial class SourceDescriptor<T> 
@@ -2838,29 +2089,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public SourceDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SourceDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for GetTemplate
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/search-template.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/search-template.html
 	///</pre>
 	///</summary>
 	public partial class GetTemplateDescriptor 
@@ -2883,29 +2118,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetTemplateDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetTemplateDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for Index
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-index_.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/docs-index_.html
 	///</pre>
 	///</summary>
 	public partial class IndexDescriptor<T> 
@@ -3000,29 +2219,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public IndexDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public IndexDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesAnalyzeGetForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-analyze.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-analyze.html
 	///</pre>
 	///</summary>
 	public partial class AnalyzeDescriptor 
@@ -3110,29 +2313,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public AnalyzeDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public AnalyzeDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesClearCacheForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-clearcache.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-clearcache.html
 	///</pre>
 	///</summary>
 	public partial class ClearCacheDescriptor 
@@ -3254,29 +2441,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public ClearCacheDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ClearCacheDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesClose
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-open-close.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-open-close.html
 	///</pre>
 	///</summary>
 	public partial class CloseIndexDescriptor 
@@ -3323,29 +2494,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CloseIndexDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CloseIndexDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesCreate
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-create-index.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-create-index.html
 	///</pre>
 	///</summary>
 	public partial class CreateIndexDescriptor 
@@ -3368,29 +2523,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CreateIndexDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CreateIndexDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesDelete
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-delete-index.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-delete-index.html
 	///</pre>
 	///</summary>
 	public partial class DeleteIndexDescriptor 
@@ -3413,29 +2552,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DeleteIndexDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteIndexDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesDeleteAlias
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-aliases.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-aliases.html
 	///</pre>
 	///</summary>
 	public partial class DeleteAliasDescriptor<T> 
@@ -3458,29 +2581,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DeleteAliasDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteAliasDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesDeleteMapping
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-delete-mapping.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-delete-mapping.html
 	///</pre>
 	///</summary>
 	public partial class DeleteMappingDescriptor<T> 
@@ -3495,29 +2602,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DeleteMappingDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteMappingDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesDeleteWarmer
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-warmers.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-warmers.html
 	///</pre>
 	///</summary>
 	public partial class DeleteWarmerDescriptor 
@@ -3532,29 +2623,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DeleteWarmerDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteWarmerDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesExists
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-exists.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-exists.html
 	///</pre>
 	///</summary>
 	public partial class IndexExistsDescriptor 
@@ -3593,29 +2668,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public IndexExistsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public IndexExistsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesExistsAliasForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-aliases.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-aliases.html
 	///</pre>
 	///</summary>
 	public partial class AliasExistsDescriptor 
@@ -3654,29 +2713,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public AliasExistsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public AliasExistsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesExistsTemplateForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-templates.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-templates.html
 	///</pre>
 	///</summary>
 	public partial class TemplateExistsDescriptor 
@@ -3684,34 +2727,10 @@ namespace Nest
 		
 	
 
-		///<summary>Explicit operation timeout for connection to master node</summary>
-		public TemplateExistsDescriptor MasterTimeout(string master_timeout)
-		{
-			this.Request.RequestParameters.MasterTimeout(master_timeout);
-			return this;
-		}
-		
-
 		///<summary>Return local information, do not retrieve the state from master node (default: false)</summary>
 		public TemplateExistsDescriptor Local(bool local = true)
 		{
 			this.Request.RequestParameters.Local(local);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public TemplateExistsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public TemplateExistsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
 			return this;
 		}
 		
@@ -3721,7 +2740,7 @@ namespace Nest
 	
 	///<summary>descriptor for IndicesExistsType
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-types-exists.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-types-exists.html
 	///</pre>
 	///</summary>
 	public partial class TypeExistsDescriptor 
@@ -3760,29 +2779,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public TypeExistsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public TypeExistsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesFlushForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-flush.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-flush.html
 	///</pre>
 	///</summary>
 	public partial class FlushDescriptor 
@@ -3794,6 +2797,14 @@ namespace Nest
 		public FlushDescriptor Force(bool force = true)
 		{
 			this.Request.RequestParameters.Force(force);
+			return this;
+		}
+		
+
+		///<summary>If set to true a new index writer is created and settings that have been changed related to the index writer will be refreshed. Note: if a full flush is required for a setting to take effect this will be part of the settings update process and it not required to be executed by the user. (This setting can be considered as internal)</summary>
+		public FlushDescriptor Full(bool full = true)
+		{
+			this.Request.RequestParameters.Full(full);
 			return this;
 		}
 		
@@ -3829,58 +2840,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public FlushDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public FlushDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
-	
-	}
-	
-	
-	///<summary>descriptor for IndicesFlushSyncedForAll
-	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/indices-synced-flush.html
-	///</pre>
-	///</summary>
-	public partial class SyncedFlushDescriptor 
-	{
-		
-	
-
-		///<summary>The URL-encoded request definition</summary>
-		public SyncedFlushDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SyncedFlushDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-get-index.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-get-index.html
 	///</pre>
 	///</summary>
 	public partial class GetIndexDescriptor 
@@ -3913,25 +2879,9 @@ namespace Nest
 		
 
 		///<summary>Whether wildcard expressions should get expanded to open or closed indices (default: open)</summary>
-		public GetIndexDescriptor ExpandWildcards(ExpandWildcards expand_wildcards)
+		public GetIndexDescriptor ExpandWildcards(params string[] expand_wildcards)
 		{
 			this.Request.RequestParameters.ExpandWildcards(expand_wildcards);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetIndexDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetIndexDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
 			return this;
 		}
 		
@@ -3941,7 +2891,7 @@ namespace Nest
 	
 	///<summary>descriptor for IndicesGetAliasForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-aliases.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-aliases.html
 	///</pre>
 	///</summary>
 	public partial class GetAliasDescriptor 
@@ -3980,29 +2930,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetAliasDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetAliasDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesGetAliasesForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-aliases.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-aliases.html
 	///</pre>
 	///</summary>
 	public partial class GetAliasesDescriptor 
@@ -4025,29 +2959,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetAliasesDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetAliasesDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesGetFieldMappingForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-get-field-mapping.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-get-field-mapping.html
 	///</pre>
 	///</summary>
 	public partial class GetFieldMappingDescriptor<T> 
@@ -4094,29 +3012,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetFieldMappingDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetFieldMappingDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesGetMappingForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-get-mapping.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-get-mapping.html
 	///</pre>
 	///</summary>
 	public partial class GetMappingDescriptor<T> 
@@ -4141,7 +3043,7 @@ namespace Nest
 		
 
 		///<summary>Whether to expand wildcard expression to concrete indices that are open, closed or both.</summary>
-		public GetMappingDescriptor<T> ExpandWildcards(ExpandWildcards expand_wildcards)
+		public GetMappingDescriptor<T> ExpandWildcards(params string[] expand_wildcards)
 		{
 			this.Request.RequestParameters.ExpandWildcards(expand_wildcards);
 			return this;
@@ -4155,29 +3057,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetMappingDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetMappingDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesGetSettingsForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-get-settings.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-get-settings.html
 	///</pre>
 	///</summary>
 	public partial class GetIndexSettingsDescriptor 
@@ -4224,29 +3110,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetIndexSettingsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetIndexSettingsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesGetUpgradeForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/indices-upgrade.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/indices-upgrade.html
 	///</pre>
 	///</summary>
 	public partial class UpgradeStatusDescriptor 
@@ -4285,29 +3155,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public UpgradeStatusDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public UpgradeStatusDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesGetWarmerForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-warmers.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-warmers.html
 	///</pre>
 	///</summary>
 	public partial class GetWarmerDescriptor 
@@ -4346,29 +3200,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetWarmerDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetWarmerDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesOpen
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-open-close.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-open-close.html
 	///</pre>
 	///</summary>
 	public partial class OpenIndexDescriptor 
@@ -4415,29 +3253,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public OpenIndexDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public OpenIndexDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesOptimizeForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-optimize.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-optimize.html
 	///</pre>
 	///</summary>
 	public partial class OptimizeDescriptor 
@@ -4516,29 +3338,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public OptimizeDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public OptimizeDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesPutAlias
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-aliases.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-aliases.html
 	///</pre>
 	///</summary>
 	public partial class PutAliasDescriptor 
@@ -4561,29 +3367,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public PutAliasDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public PutAliasDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesPutMapping
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-put-mapping.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-put-mapping.html
 	///</pre>
 	///</summary>
 	public partial class PutMappingDescriptor<T> 
@@ -4638,29 +3428,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public PutMappingDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public PutMappingDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesPutSettingsForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-update-settings.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-update-settings.html
 	///</pre>
 	///</summary>
 	public partial class UpdateSettingsDescriptor 
@@ -4707,29 +3481,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public UpdateSettingsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public UpdateSettingsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesPutTemplateForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-templates.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-templates.html
 	///</pre>
 	///</summary>
 	public partial class PutTemplateDescriptor 
@@ -4768,29 +3526,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public PutTemplateDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public PutTemplateDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesPutWarmerForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-warmers.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-warmers.html
 	///</pre>
 	///</summary>
 	public partial class PutWarmerDescriptor 
@@ -4829,29 +3571,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public PutWarmerDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public PutWarmerDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesRecoveryForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/indices-recovery.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/indices-recovery.html
 	///</pre>
 	///</summary>
 	public partial class RecoveryStatusDescriptor 
@@ -4882,29 +3608,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public RecoveryStatusDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public RecoveryStatusDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesRefreshForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-refresh.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-refresh.html
 	///</pre>
 	///</summary>
 	public partial class RefreshDescriptor 
@@ -4951,29 +3661,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public RefreshDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public RefreshDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesSegmentsForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-segments.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-segments.html
 	///</pre>
 	///</summary>
 	public partial class SegmentsDescriptor 
@@ -5020,29 +3714,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public SegmentsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SegmentsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesStatsForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-stats.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-stats.html
 	///</pre>
 	///</summary>
 	public partial class IndicesStatsDescriptor 
@@ -5130,29 +3808,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public IndicesStatsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public IndicesStatsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesStatusForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-status.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-status.html
 	///</pre>
 	///</summary>
 	public partial class IndicesStatusDescriptor 
@@ -5215,29 +3877,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public IndicesStatusDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public IndicesStatusDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesUpdateAliasesForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/indices-aliases.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/indices-aliases.html
 	///</pre>
 	///</summary>
 	public partial class AliasDescriptor 
@@ -5260,29 +3906,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public AliasDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public AliasDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesUpgradeForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/indices-upgrade.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/indices-upgrade.html
 	///</pre>
 	///</summary>
 	public partial class UpgradeDescriptor 
@@ -5321,37 +3951,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>If true, only ancient (an older Lucene major release) segments will be upgraded</summary>
-		public UpgradeDescriptor OnlyAncientSegments(bool only_ancient_segments = true)
-		{
-			this.Request.RequestParameters.OnlyAncientSegments(only_ancient_segments);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public UpgradeDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public UpgradeDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for IndicesValidateQueryGetForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-validate.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-validate.html
 	///</pre>
 	///</summary>
 	public partial class ValidateQueryDescriptor<T> 
@@ -5399,71 +4005,7 @@ namespace Nest
 		}
 		
 
-		///<summary>Query in the Lucene query string syntax</summary>
-		public ValidateQueryDescriptor<T> Q(string q)
-		{
-			this.Request.RequestParameters.Q(q);
-			return this;
-		}
-		
-
-		///<summary>The analyzer to use for the query string</summary>
-		public ValidateQueryDescriptor<T> Analyzer(string analyzer)
-		{
-			this.Request.RequestParameters.Analyzer(analyzer);
-			return this;
-		}
-		
-
-		///<summary>Specify whether wildcard and prefix queries should be analyzed (default: false)</summary>
-		public ValidateQueryDescriptor<T> AnalyzeWildcard(bool analyze_wildcard = true)
-		{
-			this.Request.RequestParameters.AnalyzeWildcard(analyze_wildcard);
-			return this;
-		}
-		
-
-		///<summary>The default operator for query string query (AND or OR)</summary>
-		public ValidateQueryDescriptor<T> DefaultOperator(DefaultOperator default_operator)
-		{
-			this.Request.RequestParameters.DefaultOperator(default_operator);
-			return this;
-		}
-		
-
-		///<summary>The field to use as default where no field prefix is given in the query string</summary>
-		public ValidateQueryDescriptor<T> Df(string df)
-		{
-			this.Request.RequestParameters.Df(df);
-			return this;
-		}
-		
-
-		///<summary>Specify whether format-based query failures (such as providing text to a numeric field) should be ignored</summary>
-		public ValidateQueryDescriptor<T> Lenient(bool lenient = true)
-		{
-			this.Request.RequestParameters.Lenient(lenient);
-			return this;
-		}
-		
-
-		///<summary>Specify whether query terms should be lowercased</summary>
-		public ValidateQueryDescriptor<T> LowercaseExpandedTerms(bool lowercase_expanded_terms = true)
-		{
-			this.Request.RequestParameters.LowercaseExpandedTerms(lowercase_expanded_terms);
-			return this;
-		}
-		
-
-		///<summary>Provide a more detailed explanation showing the actual Lucene query that will be executed.</summary>
-		public ValidateQueryDescriptor<T> Rewrite(bool rewrite = true)
-		{
-			this.Request.RequestParameters.Rewrite(rewrite);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
+		///<summary>The URL-encoded query definition (instead of using the request body)</summary>
 		public ValidateQueryDescriptor<T> Source(string source)
 		{
 			this.Request.RequestParameters.Source(source);
@@ -5471,10 +4013,10 @@ namespace Nest
 		}
 		
 
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ValidateQueryDescriptor<T> FilterPath(string filter_path)
+		///<summary>Query in the Lucene query string syntax</summary>
+		public ValidateQueryDescriptor<T> Q(string q)
 		{
-			this.Request.RequestParameters.FilterPath(filter_path);
+			this.Request.RequestParameters.Q(q);
 			return this;
 		}
 		
@@ -5484,29 +4026,13 @@ namespace Nest
 	
 	///<summary>descriptor for Info
 	///<pre>
-	///http://www.elastic.co/guide/
+	///http://www.elasticsearch.org/guide/
 	///</pre>
 	///</summary>
 	public partial class InfoDescriptor 
 	{
 		
 	
-
-		///<summary>The URL-encoded request definition</summary>
-		public InfoDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public InfoDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
@@ -5520,22 +4046,6 @@ namespace Nest
 	{
 		
 	
-
-		///<summary>The URL-encoded request definition</summary>
-		public ListBenchmarksDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ListBenchmarksDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 		
 		protected override void UpdatePathInfo(IConnectionSettingsValues settings, ElasticsearchPathInfo<ListBenchmarksRequestParameters> pathInfo)
 		{
@@ -5548,7 +4058,7 @@ namespace Nest
 	
 	///<summary>descriptor for MgetGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-multi-get.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/docs-multi-get.html
 	///</pre>
 	///</summary>
 	public partial class MultiGetDescriptor 
@@ -5653,29 +4163,13 @@ namespace Nest
 			return this;
 		}
 			
-
-		///<summary>The URL-encoded request definition</summary>
-		public MultiGetDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public MultiGetDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for MltGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-more-like-this.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-more-like-this.html
 	///</pre>
 	///</summary>
 	public partial class MoreLikeThisDescriptor<T> 
@@ -5837,29 +4331,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public MoreLikeThisDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public MoreLikeThisDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for MpercolateGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-percolate.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-percolate.html
 	///</pre>
 	///</summary>
 	public partial class MultiPercolateDescriptor 
@@ -5890,29 +4368,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public MultiPercolateDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public MultiPercolateDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for MsearchGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-multi-search.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-multi-search.html
 	///</pre>
 	///</summary>
 	public partial class MultiSearchDescriptor 
@@ -5927,29 +4389,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public MultiSearchDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public MultiSearchDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for MtermvectorsGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-multi-termvectors.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.x/docs-multi-termvectors.html
 	///</pre>
 	///</summary>
 	public partial class MultiTermVectorsDescriptor<T> 
@@ -6047,29 +4493,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public MultiTermVectorsDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public MultiTermVectorsDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for NodesHotThreadsForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-nodes-hot-threads.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-nodes-hot-threads.html
 	///</pre>
 	///</summary>
 	public partial class NodesHotThreadsDescriptor 
@@ -6101,34 +4531,10 @@ namespace Nest
 		}
 		
 
-		///<summary>Don&#39;t show threads that are in known-idle places, such as waiting on a socket select or pulling from an empty task queue (default: true)</summary>
-		public NodesHotThreadsDescriptor IgnoreIdleThreads(bool ignore_idle_threads = true)
-		{
-			this.Request.RequestParameters.IgnoreIdleThreads(ignore_idle_threads);
-			return this;
-		}
-		
-
 		///<summary>The type to sample (default: cpu)</summary>
 		public NodesHotThreadsDescriptor ThreadType(ThreadType thread_type)
 		{
 			this.Request.RequestParameters.ThreadType(thread_type);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public NodesHotThreadsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public NodesHotThreadsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
 			return this;
 		}
 		
@@ -6138,7 +4544,7 @@ namespace Nest
 	
 	///<summary>descriptor for NodesInfoForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-nodes-info.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-nodes-info.html
 	///</pre>
 	///</summary>
 	public partial class NodesInfoDescriptor 
@@ -6161,29 +4567,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public NodesInfoDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public NodesInfoDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for NodesShutdownForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-nodes-shutdown.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-nodes-shutdown.html
 	///</pre>
 	///</summary>
 	public partial class NodesShutdownDescriptor 
@@ -6206,29 +4596,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public NodesShutdownDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public NodesShutdownDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for NodesStatsForAll
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/cluster-nodes-stats.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/cluster-nodes-stats.html
 	///</pre>
 	///</summary>
 	public partial class NodesStatsDescriptor 
@@ -6324,29 +4698,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public NodesStatsDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public NodesStatsDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for PercolateGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-percolate.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-percolate.html
 	///</pre>
 	///</summary>
 	public partial class PercolateDescriptor<T> 
@@ -6449,58 +4807,26 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public PercolateDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public PercolateDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for Ping
 	///<pre>
-	///http://www.elastic.co/guide/
+	///http://www.elasticsearch.org/guide/
 	///</pre>
 	///</summary>
 	public partial class PingDescriptor 
 	{
 		
 	
-
-		///<summary>The URL-encoded request definition</summary>
-		public PingDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public PingDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for PutScript
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/modules-scripting.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/modules-scripting.html
 	///</pre>
 	///</summary>
 	public partial class PutScriptDescriptor 
@@ -6531,58 +4857,26 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public PutScriptDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public PutScriptDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for ScrollGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-request-scroll.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-request-scroll.html
 	///</pre>
 	///</summary>
 	public partial class ScrollDescriptor<T> 
 	{
 		
 	
-
-		///<summary>The URL-encoded request definition</summary>
-		public ScrollDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public ScrollDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SearchGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-search.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-search.html
 	///</pre>
 	///</summary>
 	public partial class SearchDescriptor<T> 
@@ -6750,21 +5044,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SearchDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SearchExists
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/search-exists.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/search-exists.html
 	///</pre>
 	///</summary>
 	public partial class SearchExistsDescriptor<T> 
@@ -6820,74 +5106,10 @@ namespace Nest
 		}
 		
 
-		///<summary>Query in the Lucene query string syntax</summary>
-		public SearchExistsDescriptor<T> Q(string q)
-		{
-			this.Request.RequestParameters.Q(q);
-			return this;
-		}
-		
-
-		///<summary>The analyzer to use for the query string</summary>
-		public SearchExistsDescriptor<T> Analyzer(string analyzer)
-		{
-			this.Request.RequestParameters.Analyzer(analyzer);
-			return this;
-		}
-		
-
-		///<summary>Specify whether wildcard and prefix queries should be analyzed (default: false)</summary>
-		public SearchExistsDescriptor<T> AnalyzeWildcard(bool analyze_wildcard = true)
-		{
-			this.Request.RequestParameters.AnalyzeWildcard(analyze_wildcard);
-			return this;
-		}
-		
-
-		///<summary>The default operator for query string query (AND or OR)</summary>
-		public SearchExistsDescriptor<T> DefaultOperator(DefaultOperator default_operator)
-		{
-			this.Request.RequestParameters.DefaultOperator(default_operator);
-			return this;
-		}
-		
-
-		///<summary>The field to use as default where no field prefix is given in the query string</summary>
-		public SearchExistsDescriptor<T> Df(string df)
-		{
-			this.Request.RequestParameters.Df(df);
-			return this;
-		}
-		
-
-		///<summary>Specify whether format-based query failures (such as providing text to a numeric field) should be ignored</summary>
-		public SearchExistsDescriptor<T> Lenient(bool lenient = true)
-		{
-			this.Request.RequestParameters.Lenient(lenient);
-			return this;
-		}
-		
-
-		///<summary>Specify whether query terms should be lowercased</summary>
-		public SearchExistsDescriptor<T> LowercaseExpandedTerms(bool lowercase_expanded_terms = true)
-		{
-			this.Request.RequestParameters.LowercaseExpandedTerms(lowercase_expanded_terms);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
+		///<summary>The URL-encoded query definition (instead of using the request body)</summary>
 		public SearchExistsDescriptor<T> Source(string source)
 		{
 			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SearchExistsDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
 			return this;
 		}
 		
@@ -6897,7 +5119,7 @@ namespace Nest
 	
 	///<summary>descriptor for SearchShardsGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/search-shards.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/search-shards.html
 	///</pre>
 	///</summary>
 	public partial class SearchShardsDescriptor<T> 
@@ -6952,29 +5174,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public SearchShardsDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SearchShardsDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SearchTemplateGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/current/search-template.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-template.html
 	///</pre>
 	///</summary>
 	public partial class SearchTemplateDescriptor<T> 
@@ -7037,29 +5243,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public SearchTemplateDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SearchTemplateDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SnapshotCreate
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/modules-snapshots.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/modules-snapshots.html
 	///</pre>
 	///</summary>
 	public partial class SnapshotDescriptor 
@@ -7082,29 +5272,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public SnapshotDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SnapshotDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SnapshotCreateRepository
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/modules-snapshots.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/modules-snapshots.html
 	///</pre>
 	///</summary>
 	public partial class CreateRepositoryDescriptor 
@@ -7135,29 +5309,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public CreateRepositoryDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public CreateRepositoryDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SnapshotDelete
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/modules-snapshots.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/modules-snapshots.html
 	///</pre>
 	///</summary>
 	public partial class DeleteSnapshotDescriptor 
@@ -7172,29 +5330,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DeleteSnapshotDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteSnapshotDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SnapshotDeleteRepository
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/modules-snapshots.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/modules-snapshots.html
 	///</pre>
 	///</summary>
 	public partial class DeleteRepositoryDescriptor 
@@ -7217,29 +5359,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public DeleteRepositoryDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public DeleteRepositoryDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SnapshotGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/modules-snapshots.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/modules-snapshots.html
 	///</pre>
 	///</summary>
 	public partial class GetSnapshotDescriptor 
@@ -7254,29 +5380,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetSnapshotDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetSnapshotDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SnapshotGetRepository
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/modules-snapshots.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/modules-snapshots.html
 	///</pre>
 	///</summary>
 	public partial class GetRepositoryDescriptor 
@@ -7299,29 +5409,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public GetRepositoryDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public GetRepositoryDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SnapshotRestore
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/modules-snapshots.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/modules-snapshots.html
 	///</pre>
 	///</summary>
 	public partial class RestoreDescriptor 
@@ -7344,29 +5438,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public RestoreDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public RestoreDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SnapshotStatus
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/modules-snapshots.html
 	///</pre>
 	///</summary>
 	public partial class SnapshotStatusDescriptor 
@@ -7381,29 +5459,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public SnapshotStatusDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SnapshotStatusDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for SnapshotVerifyRepository
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/master/modules-snapshots.html
 	///</pre>
 	///</summary>
 	public partial class VerifyRepositoryDescriptor 
@@ -7426,29 +5488,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public VerifyRepositoryDescriptor Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public VerifyRepositoryDescriptor FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for Suggest
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/search-suggesters.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/search-suggesters.html
 	///</pre>
 	///</summary>
 	public partial class SuggestDescriptor<T> 
@@ -7496,18 +5542,10 @@ namespace Nest
 		}
 		
 
-		///<summary>The URL-encoded request definition</summary>
+		///<summary>The URL-encoded request definition (instead of using request body)</summary>
 		public SuggestDescriptor<T> Source(string source)
 		{
 			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public SuggestDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
 			return this;
 		}
 		
@@ -7517,7 +5555,7 @@ namespace Nest
 	
 	///<summary>descriptor for TermvectorGet
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-termvectors.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.x/docs-termvectors.html
 	///</pre>
 	///</summary>
 	public partial class TermvectorDescriptor<T> 
@@ -7615,29 +5653,13 @@ namespace Nest
 			return this;
 		}
 		
-
-		///<summary>The URL-encoded request definition</summary>
-		public TermvectorDescriptor<T> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public TermvectorDescriptor<T> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
-			return this;
-		}
-		
 	
 	}
 	
 	
 	///<summary>descriptor for Update
 	///<pre>
-	///http://www.elastic.co/guide/en/elasticsearch/reference/1.6/docs-update.html
+	///http://www.elasticsearch.org/guide/en/elasticsearch/reference/1.4/docs-update.html
 	///</pre>
 	///</summary>
 	public partial class UpdateDescriptor<TDocument,TPartialDocument> 
@@ -7661,7 +5683,7 @@ namespace Nest
 		}
 		
 
-		///<summary>ID of the parent document. Is is only used for routing and when for the upsert request</summary>
+		///<summary>ID of the parent document</summary>
 		public UpdateDescriptor<TDocument,TPartialDocument> Parent(string parent)
 		{
 			this.Request.RequestParameters.Parent(parent);
@@ -7761,22 +5783,6 @@ namespace Nest
 		public UpdateDescriptor<TDocument,TPartialDocument> VersionType(VersionType version_type)
 		{
 			this.Request.RequestParameters.VersionType(version_type);
-			return this;
-		}
-		
-
-		///<summary>The URL-encoded request definition</summary>
-		public UpdateDescriptor<TDocument,TPartialDocument> Source(string source)
-		{
-			this.Request.RequestParameters.Source(source);
-			return this;
-		}
-		
-
-		///<summary>Comma separated list of filters used to reduce the response returned by Elasticsearch</summary>
-		public UpdateDescriptor<TDocument,TPartialDocument> FilterPath(string filter_path)
-		{
-			this.Request.RequestParameters.FilterPath(filter_path);
 			return this;
 		}
 		

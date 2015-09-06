@@ -11,10 +11,6 @@ namespace Nest
 	{
 		[JsonProperty("match")]
 		IQueryContainer Match { get; set; }
-
-		[JsonProperty("boost")]
-		double? Boost { get; set; }
-
 	}
 
 	public class SpanMultiTermQuery : PlainQuery, ISpanMultiTermQuery
@@ -24,10 +20,7 @@ namespace Nest
 			container.SpanMultiTerm = this;
 		}
 
-
 		public IQueryContainer Match { get; set; }
-
-		public double? Boost { get; set; }
 
 		public string Name { get; set; }
 
@@ -39,24 +32,14 @@ namespace Nest
 		where T : class
 	{
 		private ISpanMultiTermQuery Self { get { return this; } }
-
 		IQueryContainer ISpanMultiTermQuery.Match { get; set; }
 
-		double? ISpanMultiTermQuery.Boost { get; set; }
-
 		bool IQuery.IsConditionless { get { return false; } }
-
 		string IQuery.Name { get; set; }
 
 		public SpanMultiTermQueryDescriptor<T> Name(string name)
 		{
 			Self.Name = name;
-			return this;
-		}
-		
-		public SpanMultiTermQueryDescriptor<T> Boost(double boost)
-		{
-			Self.Boost = boost;
 			return this;
 		}
 		

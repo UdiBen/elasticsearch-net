@@ -16,9 +16,6 @@ namespace Nest
 		[JsonProperty("flags")]
 		string Flags { get; set; }
 
-		[JsonProperty(PropertyName = "max_determinized_states")]
-		int? MaximumDeterminizedStates { get; set; }
-
 		PropertyPathMarker Field { get; set; }
 
 		[JsonProperty("boost")]
@@ -46,7 +43,6 @@ namespace Nest
 
 		public string Value { get; set; }
 		public string Flags { get; set; }
-		public int? MaximumDeterminizedStates { get; set; }
 		public PropertyPathMarker Field { get; set; }
 		public double? Boost { get; set; }
 	}
@@ -58,8 +54,6 @@ namespace Nest
 		string IRegexpQuery.Value { get; set; }
 
 		string IRegexpQuery.Flags { get; set; }
-
-		int? IRegexpQuery.MaximumDeterminizedStates { get; set; }
 
 		PropertyPathMarker IRegexpQuery.Field { get; set; }
 
@@ -89,11 +83,7 @@ namespace Nest
 			Self.Name = name;
 			return this;
 		}
-		public RegexpQueryDescriptor<T> MaximumDeterminizedStates(int maxDeterminizedStates)
-		{
-			Self.MaximumDeterminizedStates = maxDeterminizedStates;
-			return this;
-		}
+
 		public RegexpQueryDescriptor<T> Value(string regex)
 		{
 			Self.Value = regex;

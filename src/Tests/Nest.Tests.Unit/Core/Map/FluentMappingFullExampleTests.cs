@@ -207,7 +207,6 @@ namespace Nest.Tests.Unit.Core.Map
 						.Fields(pprops => pprops
 							.String(ps => ps.Name(p => p.Name).Index(FieldIndexOption.NotAnalyzed))
 							.String(ps => ps.Name(p => p.Name.Suffix("searchable")).Index(FieldIndexOption.Analyzed))
-							.Murmur3Hash(ps => ps.Name(p => p.Name.Suffix("hash")))
 						)
 					)
 					.IP(s=>s
@@ -251,9 +250,6 @@ namespace Nest.Tests.Unit.Core.Map
 								.Default("u33")
 							)
 						)
-					)
-					.Murmur3Hash(mh => mh
-						.Name("hash")
 					)
 				)
 			);

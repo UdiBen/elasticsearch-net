@@ -45,7 +45,6 @@ namespace Nest
 			fq.Analyzer = GetPropValue<string>(jo, "analyzer");
 			fq.CutoffFrequency = GetPropValue<double?>(jo, "cutoff_frequency");
 			fq.Fuzziness = GetPropValue<double?>(jo, "fuzziness");
-			fq.FuzzyTranspositions = GetPropValue<bool?>(jo, "fuzzy_transpositions");
 			fq.Lenient = GetPropValue<bool?>(jo, "lenient");
 			fq.MaxExpansions = GetPropValue<int?>(jo, "max_expansions");
 			fq.PrefixLength = GetPropValue<int?>(jo, "prefix_length");

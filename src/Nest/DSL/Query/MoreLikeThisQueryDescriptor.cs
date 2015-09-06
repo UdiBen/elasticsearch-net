@@ -21,9 +21,6 @@ namespace Nest
 		[JsonProperty(PropertyName = "percent_terms_to_match")]
 		double? TermMatchPercentage { get; set; }
 
-		[JsonProperty(PropertyName = "minimum_should_match")]
-		string MinimumShouldMatch { get; set; }
-
 		[JsonProperty(PropertyName = "stop_words")]
 		IEnumerable<string> StopWords { get; set; }
 
@@ -87,7 +84,6 @@ namespace Nest
 		public IEnumerable<PropertyPathMarker> Fields { get; set; }
 		public string LikeText { get; set; }
 		public double? TermMatchPercentage { get; set; }
-		public string MinimumShouldMatch { get; set; }
 		public IEnumerable<string> StopWords { get; set; }
 		public int? MinTermFrequency { get; set; }
 		public int? MaxQueryTerms { get; set; }
@@ -112,9 +108,7 @@ namespace Nest
 		string IMoreLikeThisQuery.LikeText { get; set; }
 
 		double? IMoreLikeThisQuery.TermMatchPercentage { get; set; }
-
-		string IMoreLikeThisQuery.MinimumShouldMatch { get; set; }
-		
+	
 		IEnumerable<string> IMoreLikeThisQuery.StopWords { get; set; }
 		
 		int? IMoreLikeThisQuery.MinTermFrequency { get; set; }
@@ -145,9 +139,7 @@ namespace Nest
 		{
 			get
 			{
-				return this.Self.LikeText.IsNullOrEmpty()
-					&& (this.Self.Ids == null || !this.Self.Ids.Any())
-					&& (this.Self.Documents == null || !this.Self.Documents.Any());
+				return this.Self.LikeText.IsNullOrEmpty();
 			}
 		}
 
@@ -220,19 +212,6 @@ namespace Nest
 			this.Self.TermMatchPercentage = termMatchPercentage;
 			return this;
 		}
-
-		public MoreLikeThisQueryDescriptor<T> MinimumShouldMatch(string minMatch)
-		{
-			this.Self.MinimumShouldMatch = minMatch;
-			return this;
-		}
-
-		public MoreLikeThisQueryDescriptor<T> MinimumShouldMatch(int minMatch)
-		{
-			this.Self.MinimumShouldMatch = minMatch.ToString();
-			return this;
-		}
-
 		public MoreLikeThisQueryDescriptor<T> Boost(double boost)
 		{
 			this.Self.Boost = boost;
